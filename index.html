@@ -37,7 +37,7 @@ header .w{display:flex;align-items:center;justify-content:space-between;height:5
 .card:hover{box-shadow:0 8px 26px rgba(0,0,0,.08);transform:translateY(-1px)}
 .pic{position:relative;height:200px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
 .pic img{max-width:92%;max-height:184px;object-fit:contain}
-.pic .ph{font:600 15px system-ui,sans-serif;color:#9aa6a4}
+.pic{text-decoration:none}.pic .ph{font:600 15px system-ui,sans-serif;color:#9aa6a4}
 .pct{position:absolute;top:10px;left:10px;font:800 15px system-ui,sans-serif;padding:4px 10px;border-radius:99px;background:var(--acc);color:#fff}
 .best .pct{background:var(--hot)}
 .badge{position:absolute;top:10px;right:10px;font:700 11px system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:99px;background:var(--hot2);color:var(--hot)}
@@ -48,6 +48,9 @@ header .w{display:flex;align-items:center;justify-content:space-between;height:5
 .meta{display:flex;flex-wrap:wrap;gap:6px 10px;font:13px system-ui,sans-serif;color:var(--mut);margin-top:auto}
 .tag{background:var(--acc2);color:var(--acc);border-radius:6px;padding:1px 7px;font-weight:600}
 .low{color:var(--hot);font-weight:600}
+.howto{display:flex;flex-wrap:wrap;gap:6px;font:12px system-ui,sans-serif}
+.howto span{border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--mut)}
+.howto .code{border-style:dashed;border-color:var(--hot);color:var(--hot)}.howto .code b{letter-spacing:.05em}
 .go{display:inline-block;margin-top:4px;font:600 14px system-ui,sans-serif;color:var(--acc);text-decoration:none}.go:hover{text-decoration:underline}
 .pager{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;margin:22px 0 4px;font-family:system-ui,sans-serif}
 .pager button{min-width:38px;padding:7px 11px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--ink);font:inherit;cursor:pointer}
@@ -75,7 +78,7 @@ details.filters>summary{display:none}
 <main class="w">
   <section class="hero">
     <h1>Today's real deals</h1>
-    <p>Food, fashion, tech and household discounts of 25% off or more, sorted into best and average deals. No credit-card cash back or points offers. Updated every morning.</p>
+    <p>Fast food, groceries, fashion, tech and household discounts of 25% off or more, sorted into best and average deals. No credit-card cash back or points offers. Updated every morning.</p>
   </section>
   <div class="layout">
     <section>
@@ -98,13 +101,13 @@ details.filters>summary{display:none}
   <div class="how">
     <b>How deals are chosen.</b> Every morning the site reads the public deal feeds of DealNews, whose editors check prices before posting.
     It keeps a deal only when the saving is real: <b>Best deals</b> are 50% off or more (or 40%+ at a lowest-ever price or an editors' pick); <b>Average deals</b> are 25–49% off.
-    Buy-one-get-one counts as 50%, free items as 100%. Credit-card cash back, points, sign-up bonuses and financial offers are left out.
+    Buy-one-get-one counts as 50%, free items as 100%. <b>Fast food</b> offers from the big chains are included when they are free food, buy-one-get-one, half price or a value meal, and each card says how to claim it (app, code, in store or online). Credit-card cash back, points, sign-up bonuses and financial offers are left out.
     Deals stay up for 10 days; prices can change or sell out, so check the price before you buy.
   </div>
 </main>
 <footer><div class="w">Deal information from <a href="https://www.dealnews.com/">DealNews</a>. Links open the deal on DealNews. Not affiliated with any store.</div></footer>
 <script>
-const CATS = ["Food & Grocery", "Fashion", "Tech", "Home & Household", "Beauty & Health", "Sports & Outdoors", "Toys & Gaming", "Other"];
+const CATS = ["Fast Food", "Food & Grocery", "Fashion", "Tech", "Home & Household", "Beauty & Health", "Sports & Outdoors", "Toys & Gaming", "Other"];
 const TIERS = [["all", "All deals"], ["best", "Best deals"], ["average", "Average deals"]];
 const SORTS = [["score", "Best value"], ["pct", "Biggest % off"], ["new", "Newest"], ["price", "Lowest price"]];
 const PER = 12;
@@ -154,6 +157,7 @@ function card(d) {
     <div class="body">
       <h2><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.t)}</a></h2>
       ${d.price != null && d.pct < 100 ? `<div class="price">${fmt(d.price)}${d.was ? `<s>${fmt(d.was)}</s>` : ""}</div>` : ""}
+      ${(d.how && d.how.length) || d.code ? `<div class="howto">${(d.how || []).map(x => `<span>${esc(x)}</span>`).join("")}${d.code ? `<span class="code" title="Promo code">Code: <b>${esc(d.code)}</b></span>` : ""}</div>` : ""}
       <div class="meta"><span class="tag">${esc(d.cat)}</span>${d.store ? `<span>${esc(d.store)}</span>` : ""}<span>${day(d.date)}</span>${d.low ? '<span class="low">Lowest price</span>' : ""}${d.staff ? "<span>Editors' pick</span>" : ""}</div>
       <a class="go" href="${esc(d.url)}" target="_blank" rel="noopener">Get this deal →</a>
     </div></article>`;

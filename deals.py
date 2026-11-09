@@ -26,6 +26,7 @@ FEEDS = [
     (DN + "/?rss=1&sort=time", None),
     (DN + "/c213/Home-Garden/Food-Drink/?rss=1", "Food & Grocery"),
     (DN + "/c214/Home-Garden/Food-Drink/Groceries/?rss=1", "Food & Grocery"),
+    (DN + "/c377/Home-Garden/Food-Drink/Restaurants/?rss=1", None),     # fast food: sorted by chain name below
     (DN + "/c202/Clothing-Accessories/?rss=1", "Fashion"),
     (DN + "/c280/Clothing-Accessories/Shoes/?rss=1", "Fashion"),
     (DN + "/c39/Computers/?rss=1", "Tech"),
@@ -37,14 +38,14 @@ FEEDS = [
     (DN + "/c211/Sports-Fitness/?rss=1", "Sports & Outdoors"),
     (DN + "/c186/Gaming-Toys/?rss=1", "Toys & Gaming"),
 ]
-CATEGORIES = ["Food & Grocery", "Fashion", "Tech", "Home & Household", "Beauty & Health",
+CATEGORIES = ["Fast Food", "Food & Grocery", "Fashion", "Tech", "Home & Household", "Beauty & Health",
               "Sports & Outdoors", "Toys & Gaming", "Other"]
 
 # DealNews's own category tag (or words in the title) -> our category. First match wins.
 CAT_RULES = [
     ("Food & Grocery", r"grocer|food|drink|coffee|snack|restaurant|pizza|beverage|wine|beer|candy|meal|chocolate|tea\b|kitchen staples"),
     ("Fashion", r"cloth|apparel|shoe|sneaker|boot|jacket|coat|dress|jeans|shirt|hoodie|watch|jewel|handbag|bag\b|backpack|sunglass|underwear|sock|fashion|outerwear"),
-    ("Tech", r"computer|laptop|notebook|tablet|ipad|macbook|monitor|tv\b|television|phone|iphone|android|headphone|earbud|airpods|speaker|camera|electronic|ssd|hard drive|storage|router|gpu|graphics card|processor|keyboard|mouse|smart ?watch|charger|power bank|printer|software|vpn|streaming device"),
+    ("Tech", r"computer|laptop|notebook|tablet|ipad|macbook|monitor|tv\b|television|phone|iphone|android|headphone|earbud|airpods|speaker|camera|electronic|ssd|hard drive|router|doorbell|smart home|echo\b|alexa|kindle|fire tv|roku|gpu|graphics card|processor|keyboard|mouse|smart ?watch|charger|power bank|printer|software|vpn|streaming device"),
     ("Home & Household", r"home|garden|kitchen|cookware|appliance|vacuum|furniture|mattress|bedding|towel|cleaning|laundry|detergent|paper towel|toilet paper|storage bin|lighting|lamp|tool|patio|grill|air fryer|blender|coffee maker|household|decor|rug|curtain|bath"),
     ("Beauty & Health", r"beauty|health|medicine|medical|vitamin|supplement|skin|hair|makeup|cosmetic|fragrance|perfume|shav|razor|tooth|oral|personal care|fitness tracker"),
     ("Sports & Outdoors", r"sport|fitness|outdoor|camping|hiking|bike|bicycle|golf|fishing|exercise|gym|yoga|running|kayak"),
@@ -92,15 +93,20 @@ def parse_discount(title, body):
     t = f"{title} . {body}"
     price = was = None
     pct = 0
-    m = re.search(r"\$([\d,]+(?:\.\d\d)?)\s*\((?:instead of|reg\.?|was|list|orig\.?|regularly)\s*\$([\d,]+(?:\.\d\d)?)\)", t, re.I)
-    if not m:
-        m = re.search(r"\$([\d,]+(?:\.\d\d)?)[^$]{0,60}?(?:instead of|reg\.?|was|list price of|originally|down from|normally)\s*\$([\d,]+(?:\.\d\d)?)", t, re.I)
-    if m:
-        price, was = money(m.group(1)), money(m.group(2))
+    tp = re.search(r"\bfor \$([\d,]+(?:\.\d\d)?)", title, re.I) or re.search(r"\$([\d,]+(?:\.\d\d)?)", title)
+    title_price = money(tp.group(1)) if tp else None
+    pairs = [r"\$([\d,]+(?:\.\d\d)?)\s*\((?:instead of|reg\.?|was|list|orig\.?|regularly)\s*\$([\d,]+(?:\.\d\d)?)\)",
+             r"\$([\d,]+(?:\.\d\d)?)[^$]{0,60}?(?:instead of|reg\.?|was|list price of|originally|down from|normally)\s*\$([\d,]+(?:\.\d\d)?)"]
+    for where in (title, body):                       # the title first; the description only if it agrees
+        for rx in pairs:
+            m = re.search(rx, where, re.I)
+            if m and (where is title or title_price is None or money(m.group(1)) == title_price):
+                price, was = money(m.group(1)), money(m.group(2))
+                break
+        if price is not None:
+            break
     if price is None:
-        m = re.search(r"\bfor \$([\d,]+(?:\.\d\d)?)", title, re.I) or re.search(r"\$([\d,]+(?:\.\d\d)?)", title)
-        if m:
-            price = money(m.group(1))
+        price = title_price
     if price and not was:
         m = re.search(r"(?:\$([\d,]+(?:\.\d\d)?) (?:off|under|below)(?: list| retail)?|best price we could find by \$([\d,]+(?:\.\d\d)?))", t, re.I)
         if m:
@@ -122,13 +128,47 @@ def parse_discount(title, body):
         pct = max(pct, 33)
     elif re.search(r"\bbuy one,? get one (50|half)\s*%? off\b", t, re.I):
         pct = max(pct, 25)
-    if re.match(r"free\b(?! shipping)", title, re.I) or re.search(r"\bfor free\b(?! shipping)|\bfree after (code|coupon)\b", title, re.I):
+    if (re.match(r"free\b(?! shipping)", title, re.I) and not re.search(r"%|\$\s*[1-9]|\bsale\b|\bclearance\b", title, re.I)) or re.search(r"\bfor free\b(?! shipping)|\bfree after (code|coupon)\b", title, re.I):
         pct = 100                                          # a real freebie
     low = bool(re.search(r"lowest price|all-time low|best price we('ve| have) seen|record low|best price we could find", t, re.I))
     return price, was, pct, low
 
 
+FAST_FOOD = re.compile(r"\b(" + "|".join([
+    "McDonald'?s", "Burger King", "Wendy'?s", "Taco Bell", "KFC", "Popeyes", "Chick-fil-A", "Subway", "Domino'?s", "Pizza Hut",
+    "Papa John'?s", "Little Caesars", "Sonic", "Arby'?s", "Jack in the Box", "Carl'?s Jr", "Hardee'?s", "Dairy Queen", "DQ",
+    "Chipotle", "Panera", "Five Guys", "Shake Shack", "Whataburger", "In-N-Out", "Wingstop", "Buffalo Wild Wings", "Dunkin'?",
+    "Starbucks", "Krispy Kreme", "Jersey Mike'?s", "Jimmy John'?s", "Firehouse Subs", "Panda Express", "Raising Cane'?s",
+    "Zaxby'?s", "Bojangles", "Culver'?s", "Qdoba", "Del Taco", "El Pollo Loco", "White Castle", "Checkers", "Rally'?s",
+    "Church'?s", "Moe'?s", "Noodles & Company", "Sbarro", "Auntie Anne'?s", "Cinnabon", "Tim Hortons", "7-Eleven", "Wawa",
+    "Sheetz", "Taco John'?s", "Captain D'?s", "Long John Silver'?s", "Pollo Tropical", "Smoothie King", "Tropical Smoothie",
+    "Jamba", "Crumbl", "Insomnia Cookies", "Marco'?s Pizza", "Papa Murphy'?s", "Hungry Howie'?s", "Steak ?n'? Shake",
+    "Freddy'?s", "Portillo'?s", "Blaze Pizza", "MOD Pizza", "Sweetgreen", "Cava", "Baskin-Robbins", "Cold Stone",
+    "Dutch Bros", "Caribou Coffee", "Peet'?s", "Wienerschnitzel", "Potbelly", "McAlister'?s", "Schlotzsky'?s"]) + r")\b", re.I)
+
+
+def how_to_get(title, body):
+    """Short labels for how to claim the offer, and the promo code if one is given."""
+    t = f"{title} . {body}"
+    how = []
+    if re.search(r"\bapp\b|app[- ]exclusive|mobile order", t, re.I):
+        how.append("In the app")
+    if re.search(r"rewards|loyalty|members?\b|sign up|account", t, re.I):
+        how.append("Free rewards account")
+    if re.search(r"in[- ]store|in[- ]restaurant|drive[- ]?thru|participating locations", t, re.I):
+        how.append("In store")
+    if re.search(r"\bonline\b|order ahead|website", t, re.I):
+        how.append("Online")
+    if re.search(r"doordash|uber ?eats|grubhub|delivery", t, re.I):
+        how.append("Delivery")
+    m = re.search(r"(?:promo |coupon |offer )?code[:\s]+[\"“']?([A-Z0-9]{4,15})\b", t)
+    return how[:3], (m.group(1) if m else "")
+
+
 def category_for(tag, title, feed_cat):
+    if FAST_FOOD.search(title) and re.search(r"restaurant|fast food|food|coffee|pizza|drink|snack|groceries|^$", tag or "", re.I) \
+            and not re.search(r"gift card|grocery|k-cup|\bpods?\b|ground coffee|whole bean|\boz\.?\b|\bounce", title, re.I):
+        return "Fast Food"
     if feed_cat:
         return feed_cat
     for cat, rx in CAT_RULES:
@@ -141,10 +181,12 @@ def category_for(tag, title, feed_cat):
 
 
 def store_of(title, body):
-    m = re.search(r"\bat ((?:[A-Z][\w&'!-]*)(?: [A-Z][\w&'!-]*){0,2})", f"{body} {title}")
+    m = re.search(r"\bat ((?:[A-Z][\w&'-]*)(?: [A-Z][\w&'-]*){0,2})", f"{body} {title}")
     if m and m.group(1).lower() not in {"the", "a", "checkout", "this", "least"}:
         return m.group(1).rstrip(".")
-    m = re.match(r"([A-Z][\w&'.-]+)\b.{0,40}?\b(?:sale|clearance|coupon|promo|open-box)", title, re.I)
+    m = re.match(r"([A-Z][\w&'.-]+(?: [A-Z][\w&'.-]+)?)\b.{0,40}?\b(?i:sale|clearance|coupon|promo|open-box|deals?|graphic)\b", title)
+    if m and m.group(1).split()[-1].lower() in {"sale", "clearance", "open-box", "graphic"}:
+        return m.group(1).split()[0]
     return m.group(1) if m else ""
 
 
@@ -193,6 +235,7 @@ def parse_feed(xml, feed_cat, source):
             "date": dt.strftime("%Y-%m-%d"),
             "ts": int(dt.timestamp()),
             "note": body[:220],
+            **dict(zip(("how", "code"), how_to_get(title, body))),
         })
     return out
 
@@ -212,6 +255,18 @@ def rank(d):
 
 
 def tier(d):
+    if d["cat"] == "Fast Food":                            # fast food rarely states a % off
+        t = d["t"]
+        if d["pct"] >= 50:                                 # free item, buy one get one, half price
+            return "best"
+        free = re.search(r"\bfree\b(?! shipping| delivery)", t, re.I)
+        big = re.search(r"(?:with|w/)(?: a)? \$([\d.]+)\+? (?:purchase|order|minimum)", t, re.I)
+        if free and (not big or float(big.group(1)) <= 5):
+            d["pct"] = 100                                 # shown as FREE
+            return "best"                                  # free food with no or a tiny purchase
+        if d["pct"] >= 20 or re.search(r"\bfree\b(?! shipping| delivery)|\$0?\.\d\d\b|\$[1-6](\.\d\d)?\b|\b\d+ for \$\d+|\bvalue\b|\bmeal deal\b|\bbundle\b|\bbox\b|\$\d+ off", t, re.I):
+            return "average"
+        return None
     if d["pct"] >= BEST_PCT or (d["pct"] >= 40 and (d["low"] or d["staff"])):
         return "best"
     if d["pct"] >= MIN_PCT or (d["staff"] and d["pct"] >= 15):
