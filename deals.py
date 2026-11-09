@@ -321,6 +321,38 @@ def reddit_deal(p, sub, sub_cat):
     }
 
 
+def reddit_rss(sub, cat):
+    """Fallback without an API key: the subreddit's public 'top of the day' RSS feed (no vote counts)."""
+    req = urllib.request.Request(f"https://www.reddit.com/r/{sub}/top/.rss?t=day&limit=50", headers={"User-Agent": REDDIT_UA})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            root = ET.fromstring(r.read())
+    except Exception as e:
+        print(f"  r/{sub} RSS: {e}", file=sys.stderr)
+        return []
+    ns = {"a": "http://www.w3.org/2005/Atom"}
+    out = []
+    for pos, e in enumerate(root.findall("a:entry", ns)):
+        content = e.findtext("a:content", "", ns)
+        link = re.search(r'href="([^"]+)">\[link\]', content)
+        thread = (e.find("a:link", ns).get("href") if e.find("a:link", ns) is not None else "")
+        thumb = re.search(r'<img src="([^"]+)"', content)
+        when = e.findtext("a:updated", "", ns) or e.findtext("a:published", "", ns)
+        try:
+            ts = datetime.fromisoformat(when.replace("Z", "+00:00")).timestamp()
+        except ValueError:
+            ts = time.time()
+        p = {"id": (e.findtext("a:id", "", ns) or "").replace("t3_", ""), "title": e.findtext("a:title", "", ns),
+             "url": html.unescape(link.group(1)) if link else thread, "permalink": urllib.parse.urlparse(thread).path,
+             "created_utc": ts, "score": 0, "num_comments": 0, "thumbnail": html.unescape(thumb.group(1)) if thumb else ""}
+        d = reddit_deal(p, sub, cat)
+        if d:
+            d["hot"] = pos < 15                            # near the top of the day's ranking
+            d["votes"] = 0
+            out.append(d)
+    return out
+
+
 def reddit_deals():
     """Top posts of the last day from the deal subreddits. Uses the free API key if given, else the public JSON."""
     token = reddit_token()
@@ -335,6 +367,12 @@ def reddit_deals():
                     posts = json.load(r)["data"]["children"]
             except Exception as e:
                 print(f"  r/{sub}: {e}" + ("" if token else " (add a free Reddit API key for reliable access)"), file=sys.stderr)
+                if not token and not got:
+                    rss = reddit_rss(sub, cat)
+                    out.extend(rss)
+                    got = len(rss)
+                    if rss:
+                        print(f"  r/{sub}: used the public RSS feed instead ({got} deals, no vote counts)")
                 break
             for c in posts:
                 d = reddit_deal(c.get("data", {}), sub, cat)

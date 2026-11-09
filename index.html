@@ -166,7 +166,7 @@ function card(d) {
       <h2><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.t)}</a></h2>
       ${d.price != null && d.pct < 100 ? `<div class="price">${fmt(d.price)}${d.was ? `<s>${fmt(d.was)}</s>` : ""}</div>` : ""}
       ${(d.how && d.how.length) || d.code ? `<div class="howto">${(d.how || []).map(x => `<span>${esc(x)}</span>`).join("")}${d.code ? `<span class="code" title="Promo code">Code: <b>${esc(d.code)}</b></span>` : ""}</div>` : ""}
-      <div class="meta"><span class="tag">${esc(d.cat)}</span>${d.store ? `<span>${esc(d.store)}</span>` : ""}<span>${day(d.date)}</span><span class="src">${esc(d.src || "DealNews")}</span>${d.votes ? `<a class="pop" href="${esc(d.thread || d.url)}" target="_blank" rel="noopener" title="Upvotes and comments on Reddit">▲ ${kfmt(d.votes)} · ${kfmt(d.comments || 0)} comments</a>` : ""}${d.low ? '<span class="low">Lowest price</span>' : ""}${d.staff ? "<span>Editors' pick</span>" : ""}</div>
+      <div class="meta"><span class="tag">${esc(d.cat)}</span>${d.store ? `<span>${esc(d.store)}</span>` : ""}<span>${day(d.date)}</span><span class="src">${esc(d.src || "DealNews")}</span>${d.votes ? `<a class="pop" href="${esc(d.thread || d.url)}" target="_blank" rel="noopener" title="Upvotes and comments on Reddit">▲ ${kfmt(d.votes)} · ${kfmt(d.comments || 0)} comments</a>` : d.thread ? `<a class="pop" href="${esc(d.thread)}" target="_blank" rel="noopener">Reddit discussion</a>` : ""}${d.low ? '<span class="low">Lowest price</span>' : ""}${d.staff ? "<span>Editors' pick</span>" : ""}</div>
       <a class="go" href="${esc(d.url)}" target="_blank" rel="noopener">Get this deal →</a>
     </div></article>`;
 }
