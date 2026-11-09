@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Deals Digest</title>
+<meta name="description" content="The day's real discounts on food, fashion, tech and household goods: 25% off or more, no credit-card cash back. Updated daily.">
+<style>
+:root{--bg:#fffefa;--card:#fff;--ink:#1d2a2a;--mut:#667271;--line:#e5e3da;--acc:#0e7c66;--acc2:#e8f4f0;--hot:#c2410c;--hot2:#fff1e8}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#141a19;--card:#1b2423;--ink:#e8efee;--mut:#98a7a5;--line:#2c3836;--acc:#4fd1b5;--acc2:#1f2f2c;--hot:#fb923c;--hot2:#3a2417}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#141a19;--card:#1b2423;--ink:#e8efee;--mut:#98a7a5;--line:#2c3836;--acc:#4fd1b5;--acc2:#1f2f2c;--hot:#fb923c;--hot2:#3a2417}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Georgia,"Times New Roman",serif}
+a{color:inherit}
+.w{max-width:1500px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+header .w{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.logo{font-weight:700;font-size:20px;letter-spacing:-.3px;text-decoration:none}.logo span{color:var(--acc)}
+.upd{font:13px system-ui,sans-serif;color:var(--mut)}
+.hero{padding:28px 0 16px}
+.hero h1{font-size:clamp(28px,4.5vw,42px);margin:0 0 4px;letter-spacing:-.6px}
+.hero p{margin:0;color:var(--mut);font-size:17px;max-width:760px}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:28px;align-items:start;padding-bottom:30px}
+.side{position:sticky;top:70px;max-height:calc(100vh - 84px);overflow:auto;display:flex;flex-direction:column;gap:12px;font-family:system-ui,sans-serif;font-size:14px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.box h3{margin:0 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.box input{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font:inherit}
+.opt{display:flex;justify-content:space-between;align-items:center;width:100%;border:0;background:none;color:var(--ink);font:inherit;text-align:left;padding:7px 9px;border-radius:8px;cursor:pointer}
+.opt:hover{background:var(--acc2)}
+.opt.on{background:var(--acc);color:#fff}
+.opt .n{font-size:12px;opacity:.75}
+.opt:disabled{opacity:.4;cursor:default;background:none}
+.bar{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin:0 0 12px;font:14px system-ui,sans-serif;color:var(--mut)}
+.bar b{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .15s,transform .15s}
+.card:hover{box-shadow:0 8px 26px rgba(0,0,0,.08);transform:translateY(-1px)}
+.pic{position:relative;height:200px;background:#fff;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--line)}
+.pic img{max-width:92%;max-height:184px;object-fit:contain}
+.pic .ph{font:600 15px system-ui,sans-serif;color:#9aa6a4}
+.pct{position:absolute;top:10px;left:10px;font:800 15px system-ui,sans-serif;padding:4px 10px;border-radius:99px;background:var(--acc);color:#fff}
+.best .pct{background:var(--hot)}
+.badge{position:absolute;top:10px;right:10px;font:700 11px system-ui,sans-serif;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:99px;background:var(--hot2);color:var(--hot)}
+.body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.body h2{font-size:17px;line-height:1.3;margin:0}
+.body h2 a{text-decoration:none}.body h2 a:hover{color:var(--acc)}
+.price{font:700 20px system-ui,sans-serif}.price s{font-weight:400;font-size:14px;color:var(--mut);margin-left:6px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 10px;font:13px system-ui,sans-serif;color:var(--mut);margin-top:auto}
+.tag{background:var(--acc2);color:var(--acc);border-radius:6px;padding:1px 7px;font-weight:600}
+.low{color:var(--hot);font-weight:600}
+.go{display:inline-block;margin-top:4px;font:600 14px system-ui,sans-serif;color:var(--acc);text-decoration:none}.go:hover{text-decoration:underline}
+.pager{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px;margin:22px 0 4px;font-family:system-ui,sans-serif}
+.pager button{min-width:38px;padding:7px 11px;border:1px solid var(--line);border-radius:9px;background:var(--card);color:var(--ink);font:inherit;cursor:pointer}
+.pager button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.pager button:disabled{opacity:.4;cursor:default}
+.empty{color:var(--mut);padding:40px 0;text-align:center;font-family:system-ui,sans-serif}
+.how{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:30px 0 10px;font:14px/1.55 system-ui,sans-serif;color:var(--mut)}
+.how b{color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:18px 0 30px;font:13px system-ui,sans-serif;color:var(--mut)}
+details.filters>summary{display:none}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .w{padding:0 16px}
+  .layout{grid-template-columns:1fr}
+  .side{position:static;max-height:none;order:-1}
+  details.filters>summary{display:block;cursor:pointer;font:600 14px system-ui,sans-serif;padding:10px 14px;border:1px solid var(--line);border-radius:12px;background:var(--card);list-style:none}
+  details.filters[open]>summary{margin-bottom:10px}
+  .grid{grid-template-columns:1fr}
+  .pic{height:180px}
+}
+</style>
+</head>
+<body>
+<header><div class="w"><a class="logo" href="./">Deals <span>Digest</span></a><span class="upd" id="upd"></span></div></header>
+<main class="w">
+  <section class="hero">
+    <h1>Today's real deals</h1>
+    <p>Food, fashion, tech and household discounts of 25% off or more, sorted into best and average deals. No credit-card cash back or points offers. Updated every morning.</p>
+  </section>
+  <div class="layout">
+    <section>
+      <div class="bar"><span id="count"></span><span id="sorttxt"></span></div>
+      <div class="grid" id="grid"></div>
+      <div class="pager" id="pager"></div>
+    </section>
+    <aside class="side">
+      <details class="filters" id="filters" open>
+        <summary>Filters</summary>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="box"><h3>Search</h3><input id="q" type="search" placeholder="e.g. AirPods, coffee, jacket" aria-label="Search deals"></div>
+          <div class="box"><h3>Deal quality</h3><div id="tiers"></div></div>
+          <div class="box"><h3>Category</h3><div id="cats"></div></div>
+          <div class="box"><h3>Sort by</h3><div id="sorts"></div></div>
+        </div>
+      </details>
+    </aside>
+  </div>
+  <div class="how">
+    <b>How deals are chosen.</b> Every morning the site reads the public deal feeds of DealNews, whose editors check prices before posting.
+    It keeps a deal only when the saving is real: <b>Best deals</b> are 50% off or more (or 40%+ at a lowest-ever price or an editors' pick); <b>Average deals</b> are 25–49% off.
+    Buy-one-get-one counts as 50%, free items as 100%. Credit-card cash back, points, sign-up bonuses and financial offers are left out.
+    Deals stay up for 10 days; prices can change or sell out, so check the price before you buy.
+  </div>
+</main>
+<footer><div class="w">Deal information from <a href="https://www.dealnews.com/">DealNews</a>. Links open the deal on DealNews. Not affiliated with any store.</div></footer>
+<script>
+const CATS = ["Food & Grocery", "Fashion", "Tech", "Home & Household", "Beauty & Health", "Sports & Outdoors", "Toys & Gaming", "Other"];
+const TIERS = [["all", "All deals"], ["best", "Best deals"], ["average", "Average deals"]];
+const SORTS = [["score", "Best value"], ["pct", "Biggest % off"], ["new", "Newest"], ["price", "Lowest price"]];
+const PER = 12;
+let deals = [], st = {tier: "all", cat: "all", sort: "score", q: "", page: 1};
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+const fmt = v => v == null ? "" : "$" + (v >= 100 ? Math.round(v).toLocaleString() : v.toFixed(2).replace(/\.00$/, ""));
+const day = s => { const d = new Date(s + "T12:00:00Z"); return d.toLocaleDateString(undefined, {month: "short", day: "numeric"}); };
+
+function readUrl() {
+  const u = new URLSearchParams(location.search);
+  if (TIERS.some(t => t[0] === u.get("tier"))) st.tier = u.get("tier");
+  if (CATS.includes(u.get("cat"))) st.cat = u.get("cat");
+  if (SORTS.some(s => s[0] === u.get("sort"))) st.sort = u.get("sort");
+  st.q = u.get("q") || ""; st.page = Math.max(1, parseInt(u.get("page")) || 1);
+  $("q").value = st.q;
+}
+function writeUrl() {
+  const u = new URLSearchParams();
+  if (st.tier !== "all") u.set("tier", st.tier);
+  if (st.cat !== "all") u.set("cat", st.cat);
+  if (st.sort !== "score") u.set("sort", st.sort);
+  if (st.q) u.set("q", st.q);
+  if (st.page > 1) u.set("page", st.page);
+  history.replaceState(null, "", (u.toString() ? "?" + u : location.pathname));
+}
+const matchQ = d => !st.q || (d.t + " " + d.store + " " + d.cat + " " + d.tag).toLowerCase().includes(st.q.toLowerCase());
+function shown() {
+  let r = deals.filter(d => (st.tier === "all" || d.tier === st.tier) && (st.cat === "all" || d.cat === st.cat) && matchQ(d));
+  const by = {score: (a, b) => b.score - a.score || b.ts - a.ts, pct: (a, b) => b.pct - a.pct || b.score - a.score,
+              new: (a, b) => b.ts - a.ts || b.score - a.score, price: (a, b) => (a.price ?? 1e9) - (b.price ?? 1e9)};
+  return r.sort(by[st.sort]);
+}
+function opts(el, list, key, count) {
+  el.innerHTML = list.map(([v, label]) => {
+    const n = count(v);
+    return `<button class="opt${st[key] === v ? " on" : ""}" data-v="${esc(v)}"${n === 0 && st[key] !== v ? " disabled" : ""}>${esc(label)}<span class="n">${n == null ? "" : n}</span></button>`;
+  }).join("");
+  el.querySelectorAll("button").forEach(b => b.onclick = () => { st[key] = b.dataset.v; st.page = 1; render(); if (matchMedia("(max-width:760px)").matches) $("filters").open = false; });
+}
+function card(d) {
+  const best = d.tier === "best";
+  const pct = d.pct >= 100 ? "FREE" : d.pct ? `−${d.pct}%` : "";
+  const img = d.img ? `<img src="${esc(d.img)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'ph',textContent:'${esc(d.cat)}'}))">` : `<span class="ph">${esc(d.cat)}</span>`;
+  return `<article class="card${best ? " best" : ""}">
+    <a class="pic" href="${esc(d.url)}" target="_blank" rel="noopener">${img}${pct ? `<span class="pct">${pct}</span>` : ""}${best ? '<span class="badge">Best deal</span>' : ""}</a>
+    <div class="body">
+      <h2><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.t)}</a></h2>
+      ${d.price != null && d.pct < 100 ? `<div class="price">${fmt(d.price)}${d.was ? `<s>${fmt(d.was)}</s>` : ""}</div>` : ""}
+      <div class="meta"><span class="tag">${esc(d.cat)}</span>${d.store ? `<span>${esc(d.store)}</span>` : ""}<span>${day(d.date)}</span>${d.low ? '<span class="low">Lowest price</span>' : ""}${d.staff ? "<span>Editors' pick</span>" : ""}</div>
+      <a class="go" href="${esc(d.url)}" target="_blank" rel="noopener">Get this deal →</a>
+    </div></article>`;
+}
+function render() {
+  const base = deals.filter(matchQ);
+  opts($("tiers"), TIERS, "tier", v => base.filter(d => (v === "all" || d.tier === v) && (st.cat === "all" || d.cat === st.cat)).length);
+  opts($("cats"), [["all", "All categories"], ...CATS.map(c => [c, c])], "cat", v => base.filter(d => (v === "all" || d.cat === v) && (st.tier === "all" || d.tier === st.tier)).length);
+  opts($("sorts"), SORTS, "sort", () => null);
+  const r = shown(), pages = Math.max(1, Math.ceil(r.length / PER));
+  st.page = Math.min(st.page, pages);
+  const part = r.slice((st.page - 1) * PER, st.page * PER);
+  $("grid").innerHTML = part.length ? part.map(card).join("") : `<p class="empty">${deals.length ? "No deals match these filters." : "No deals yet. The first daily update fills this page."}</p>`;
+  $("grid").style.display = part.length ? "" : "block";
+  const label = st.tier === "best" ? "best deals" : st.tier === "average" ? "average deals" : "deals";
+  $("count").innerHTML = `<b>${r.length}</b> ${label}${st.cat !== "all" ? " in " + esc(st.cat) : ""}${st.q ? ` matching “${esc(st.q)}”` : ""}`;
+  $("sorttxt").textContent = r.length > PER ? `Page ${st.page} of ${pages}` : "";
+  let h = "";
+  if (pages > 1) {
+    h += `<button data-p="${st.page - 1}"${st.page === 1 ? " disabled" : ""}>‹ Previous</button>`;
+    for (let i = 1; i <= pages; i++) {
+      if (i === 1 || i === pages || Math.abs(i - st.page) <= 2) h += `<button data-p="${i}" class="${i === st.page ? "on" : ""}">${i}</button>`;
+      else if (Math.abs(i - st.page) === 3) h += "<span>…</span>";
+    }
+    h += `<button data-p="${st.page + 1}"${st.page === pages ? " disabled" : ""}>Next ›</button>`;
+  }
+  $("pager").innerHTML = h;
+  $("pager").querySelectorAll("button[data-p]").forEach(b => b.onclick = () => { st.page = +b.dataset.p; render(); window.scrollTo({top: $("count").offsetTop - 80, behavior: "smooth"}); });
+  writeUrl();
+}
+let timer;
+$("q").addEventListener("input", e => { clearTimeout(timer); timer = setTimeout(() => { st.q = e.target.value.trim(); st.page = 1; render(); }, 200); });
+if (matchMedia("(max-width:760px)").matches) $("filters").open = false;
+readUrl();
+fetch("data/deals.json?t=" + Date.now(), {cache: "no-store"}).then(r => r.json()).then(j => {
+  deals = j.deals || [];
+  $("upd").textContent = j.updated ? "Updated " + j.updated : "";
+  render();
+}).catch(() => { render(); $("grid").innerHTML = '<p class="empty">Could not load the deals file.</p>'; });
+</script>
+</body>
+</html>
