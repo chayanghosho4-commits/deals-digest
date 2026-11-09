@@ -1,10 +1,11 @@
-"""Deals collector: reads DealNews's public RSS feeds once a day, keeps only real discounts
+"""Deals collector: reads DealNews's and Hip2Save's public RSS feeds and Reddit's deal communities once a day, keeps only real discounts
 (no credit-card cash back, points or sign-up bonuses), sorts them into Best and Average deals
 per category and writes data/deals.json for the website.
 
 Standard library only. Run: python deals.py
 """
 import html, json, os, re, sys, time
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
@@ -37,7 +38,22 @@ FEEDS = [
     (DN + "/c756/Health-Beauty/?rss=1", "Beauty & Health"),
     (DN + "/c211/Sports-Fitness/?rss=1", "Sports & Outdoors"),
     (DN + "/c186/Gaming-Toys/?rss=1", "Toys & Gaming"),
+    ("https://hip2save.com/feed/", None),                              # Hip2Save community deals (groceries, home, restaurants)
 ]
+
+# Reddit deal communities: upvotes and comments show which deals people actually rate.
+# Free personal-use Reddit app keys go in the GitHub secrets REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET.
+SUBREDDITS = [("deals", None), ("buildapcsales", "Tech"), ("laptopdeals", "Tech"), ("frugalmalefashion", "Fashion"),
+              ("frugalfemalefashion", "Fashion"), ("GameDeals", "Toys & Gaming")]
+REDDIT_ID = os.environ.get("REDDIT_CLIENT_ID", "").strip()
+REDDIT_SECRET = os.environ.get("REDDIT_CLIENT_SECRET", "").strip()
+REDDIT_UA = "web:deals-digest:v1.0 (by /u/" + (os.environ.get("REDDIT_USERNAME", "").strip() or "deals-digest") + ")"
+STORES = {"amazon": "Amazon", "amzn": "Amazon", "walmart": "Walmart", "target": "Target", "bestbuy": "Best Buy", "newegg": "Newegg",
+          "costco": "Costco", "homedepot": "Home Depot", "lowes": "Lowe's", "ebay": "eBay", "woot": "Woot", "steampowered": "Steam",
+          "gog": "GOG", "epicgames": "Epic Games", "humblebundle": "Humble Bundle", "microcenter": "Micro Center", "bhphotovideo": "B&H",
+          "adorama": "Adorama", "dell": "Dell", "lenovo": "Lenovo", "hp": "HP", "apple": "Apple", "kohls": "Kohl's", "macys": "Macy's",
+          "nordstromrack": "Nordstrom Rack", "nordstrom": "Nordstrom", "uniqlo": "Uniqlo", "jcrew": "J.Crew", "gap": "Gap",
+          "oldnavy": "Old Navy", "nike": "Nike", "adidas": "Adidas", "rei": "REI", "samsclub": "Sam's Club", "wayfair": "Wayfair"}
 CATEGORIES = ["Fast Food", "Food & Grocery", "Fashion", "Tech", "Home & Household", "Beauty & Health",
               "Sports & Outdoors", "Toys & Gaming", "Other"]
 
@@ -58,7 +74,7 @@ EXCLUDE = re.compile(
     r"\bbonus\b.*\b(account|checking|savings)|checking account|savings account|\bapr\b|"
     r"\brebate\b|\bsweepstakes\b|\bgiveaway\b|financial services|\bplugs?\b|\binsurance\b|% back\b",
     re.I)
-EXCLUDE_CATS = re.compile(r"financial|credit|gift card|plugs|travel", re.I)
+EXCLUDE_CATS = re.compile(r"financial|credit|gift card|plugs|travel|sponsored", re.I)
 
 
 def get(url):
@@ -100,7 +116,7 @@ def parse_discount(title, body):
     for where in (title, body):                       # the title first; the description only if it agrees
         for rx in pairs:
             m = re.search(rx, where, re.I)
-            if m and (where is title or title_price is None or money(m.group(1)) == title_price):
+            if m and (where is title or title_price is None or money(m.group(1)) <= title_price):
                 price, was = money(m.group(1)), money(m.group(2))
                 break
         if price is not None:
@@ -166,6 +182,7 @@ def how_to_get(title, body):
 
 
 def category_for(tag, title, feed_cat):
+    tag = (tag or "").strip()
     if FAST_FOOD.search(title) and re.search(r"restaurant|fast food|food|coffee|pizza|drink|snack|groceries|^$", tag or "", re.I) \
             and not re.search(r"gift card|grocery|k-cup|\bpods?\b|ground coffee|whole bean|\boz\.?\b|\bounce", title, re.I):
         return "Fast Food"
@@ -202,9 +219,12 @@ def parse_feed(xml, feed_cat, source):
         link = (it.findtext("link") or "").strip()
         guid = (it.findtext("guid") or link).strip()
         desc = it.findtext("description") or ""
-        for child in it:                                   # <content:encoded> if present
+        thumb = ""
+        for child in it:                                   # <content:encoded>, Hip2Save's <thumbnail-image>
             if child.tag.endswith("encoded") and child.text:
                 desc = child.text
+            if child.tag.endswith("thumbnail-image") and (child.text or "").startswith("http"):
+                thumb = child.text.strip()
         tag = " ".join((c.text or "") for c in it.findall("category"))
         body = text_of(desc)
         img = re.search(r"<img[^>]+src=[\"']([^\"']+)", desc or "")
@@ -220,12 +240,14 @@ def parse_feed(xml, feed_cat, source):
         if re.search(r"\bexpired\b|sold out", title, re.I):
             continue
         price, was, pct, low = parse_discount(title, body)
-        m = re.search(r"/(\d{6,})\.html", guid) or re.search(r"(\d{6,})", guid)
+        m = re.search(r"/(\d{6,})\.html", guid) or re.search(r"(\d{4,})", guid)
+        src = "Hip2Save" if "hip2save" in link else "DealNews"
         out.append({
-            "id": m.group(1) if m else guid,
+            "id": (m.group(1) if m else guid) if src == "DealNews" else "h2s:" + (m.group(1) if m else guid),
+            "src": src,
             "t": title,
             "url": link,
-            "img": html.unescape(img.group(1)) if img else "",
+            "img": html.unescape(img.group(1)) if img else thumb,
             "cat": category_for(tag, title, feed_cat),
             "tag": tag.strip(),
             "store": store_of(title, body),
@@ -240,6 +262,90 @@ def parse_feed(xml, feed_cat, source):
     return out
 
 
+def reddit_token():
+    if not (REDDIT_ID and REDDIT_SECRET):
+        return ""
+    import base64
+    req = urllib.request.Request("https://www.reddit.com/api/v1/access_token", data=b"grant_type=client_credentials",
+                                 headers={"User-Agent": REDDIT_UA, "Authorization": "Basic " + base64.b64encode(f"{REDDIT_ID}:{REDDIT_SECRET}".encode()).decode()})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return json.load(r).get("access_token", "")
+    except Exception as e:
+        print(f"  Reddit sign-in failed ({e}); check the REDDIT_CLIENT_ID / REDDIT_CLIENT_SECRET secrets", file=sys.stderr)
+        return ""
+
+
+def store_from_url(url):
+    host = re.sub(r"^www\.|^smile\.", "", urllib.parse.urlparse(url).netloc.lower())
+    for k, v in STORES.items():
+        if host.startswith(k + ".") or ("." + k + ".") in host:
+            return v
+    return host.split(".")[0].capitalize() if host and "reddit" not in host else ""
+
+
+def reddit_deal(p, sub, sub_cat):
+    """One Reddit post (JSON 'data' dict) -> deal, or None."""
+    title = html.unescape(p.get("title", "")).strip()
+    url = html.unescape(p.get("url_overridden_by_dest") or p.get("url") or "")
+    flair = (p.get("link_flair_text") or "") + " " + (p.get("link_flair_css_class") or "")
+    if (p.get("stickied") or p.get("over_18") or p.get("removed_by_category") or p.get("is_self") and not re.search(r"\$\d", title)
+            or re.search(r"expired|oos|out of stock|dead|meta|discussion|question|psa", flair, re.I)
+            or re.search(r"\b(expired|oos|out of stock|sold out|dead)\b", title, re.I)
+            or EXCLUDE.search(title) or not url):
+        return None
+    if "reddit.com" in url:
+        url = "https://www.reddit.com" + p.get("permalink", "")
+    body = html.unescape(p.get("selftext", ""))[:600]
+    price, was, pct, low = parse_discount(title, body)
+    m = re.search(r"\$([\d,]+(?:\.\d\d)?)\D{0,25}\(\$([\d,]+(?:\.\d\d)?)\)", title)   # "[GPU] RTX 5070 $499 ($599)"
+    if m and not was and money(m.group(2)) and money(m.group(1)) and money(m.group(2)) > money(m.group(1)):
+        price, was = money(m.group(1)), money(m.group(2))
+        pct = max(pct, round(100 * (was - price) / was))
+    img = ""
+    try:
+        img = html.unescape(p["preview"]["images"][0]["source"]["url"])
+    except (KeyError, IndexError, TypeError):
+        if str(p.get("thumbnail", "")).startswith("http"):
+            img = p["thumbnail"]
+    clean = re.sub(r"^\s*\[[^\]]{1,30}\]\s*", "", title)          # drop "[GPU]" style tags for display
+    dt = datetime.fromtimestamp(p.get("created_utc", time.time()), timezone.utc)
+    return {
+        "id": "rd:" + p.get("id", clean[:40]), "src": "r/" + sub, "t": clean or title, "url": url, "img": img,
+        "cat": category_for(flair + " " + (sub_cat or ""), clean, None if sub_cat is None or FAST_FOOD.search(clean) else sub_cat),
+        "tag": flair.strip(), "store": store_from_url(url), "price": price, "was": was, "pct": pct, "low": low,
+        "hot": False, "staff": False, "date": dt.strftime("%Y-%m-%d"), "ts": int(dt.timestamp()), "note": body[:220],
+        "votes": int(p.get("score") or 0), "comments": int(p.get("num_comments") or 0),
+        "thread": "https://www.reddit.com" + p.get("permalink", ""),
+        **dict(zip(("how", "code"), how_to_get(clean, body))),
+    }
+
+
+def reddit_deals():
+    """Top posts of the last day from the deal subreddits. Uses the free API key if given, else the public JSON."""
+    token = reddit_token()
+    base, head = ("https://oauth.reddit.com", {"Authorization": "bearer " + token}) if token else ("https://www.reddit.com", {})
+    head["User-Agent"] = REDDIT_UA
+    out = []
+    for sub, cat in SUBREDDITS:
+        got = 0
+        for path in (f"/r/{sub}/top.json?t=day&limit=50&raw_json=1", f"/r/{sub}/hot.json?limit=50&raw_json=1"):
+            try:
+                with urllib.request.urlopen(urllib.request.Request(base + path.replace(".json", "") if token else base + path, headers=head), timeout=30) as r:
+                    posts = json.load(r)["data"]["children"]
+            except Exception as e:
+                print(f"  r/{sub}: {e}" + ("" if token else " (add a free Reddit API key for reliable access)"), file=sys.stderr)
+                break
+            for c in posts:
+                d = reddit_deal(c.get("data", {}), sub, cat)
+                if d:
+                    out.append(d)
+                    got += 1
+            time.sleep(1 if token else PAUSE)
+        print(f"{got:3d} deals  r/{sub}" + ("" if token else " (no API key: public access)"))
+    return out
+
+
 def rank(d):
     """Deal score: mostly how much you save, plus small bonuses for 'lowest price' and editors' picks."""
     s = d["pct"]
@@ -251,6 +357,9 @@ def rank(d):
         s += 5
     if d["was"] and d["price"] is not None and d["was"] - d["price"] >= 100:
         s += 5                                             # big dollar saving
+    v = d.get("votes") or 0
+    if v:
+        s += min(20, round(6 * __import__("math").log10(v + 1)))   # people upvoted it: 100 votes +12, 1000 votes +18
     return s
 
 
@@ -267,10 +376,11 @@ def tier(d):
         if d["pct"] >= 20 or re.search(r"\bfree\b(?! shipping| delivery)|\$0?\.\d\d\b|\$[1-6](\.\d\d)?\b|\b\d+ for \$\d+|\bvalue\b|\bmeal deal\b|\bbundle\b|\bbox\b|\$\d+ off", t, re.I):
             return "average"
         return None
-    if d["pct"] >= BEST_PCT or (d["pct"] >= 40 and (d["low"] or d["staff"])):
+    v = d.get("votes") or 0
+    if d["pct"] >= BEST_PCT or (d["pct"] >= 40 and (d["low"] or d["staff"] or v >= 100)) or (d["pct"] >= 30 and v >= 500):
         return "best"
-    if d["pct"] >= MIN_PCT or (d["staff"] and d["pct"] >= 15):
-        return "average"
+    if d["pct"] >= MIN_PCT or (d["staff"] and d["pct"] >= 15) or (d["pct"] >= 15 and v >= 150) or (d["pct"] >= 10 and v >= 500) or (not d["pct"] and v >= 300):
+        return "average"                                   # strongly upvoted even when the % is not stated
     return None
 
 
@@ -296,11 +406,22 @@ def main():
                     d["cat"] = prev["cat"]
             by_id[d["id"]] = d
         time.sleep(PAUSE)
+    items = reddit_deals()
+    seen += len(items)
+    for d in items:
+        prev = by_id.get(d["id"])
+        if prev:
+            d["date"], d["ts"] = prev["date"], prev["ts"]
+            d["votes"] = max(d["votes"], prev.get("votes") or 0)
+        by_id[d["id"]] = d
     cutoff = int((datetime.now(timezone.utc) - timedelta(days=KEEP_DAYS)).timestamp())
     keep = []
     for d in by_id.values():
         if d["ts"] < cutoff:
             continue
+        if not str(d.get("src", "")).startswith("r/"):        # re-check saved deals with today's rules
+            d["price"], d["was"], d["pct"], d["low"] = parse_discount(d["t"], d.get("note", ""))
+            d["store"] = store_of(d["t"], d.get("note", "")) or d.get("store", "")
         d["tier"] = tier(d)
         if not d["tier"]:
             continue

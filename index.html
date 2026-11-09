@@ -48,6 +48,8 @@ header .w{display:flex;align-items:center;justify-content:space-between;height:5
 .meta{display:flex;flex-wrap:wrap;gap:6px 10px;font:13px system-ui,sans-serif;color:var(--mut);margin-top:auto}
 .tag{background:var(--acc2);color:var(--acc);border-radius:6px;padding:1px 7px;font-weight:600}
 .low{color:var(--hot);font-weight:600}
+.src{font-style:italic}
+.pop{color:var(--hot);font-weight:600;text-decoration:none}.pop:hover{text-decoration:underline}
 .howto{display:flex;flex-wrap:wrap;gap:6px;font:12px system-ui,sans-serif}
 .howto span{border:1px solid var(--line);border-radius:99px;padding:2px 9px;color:var(--mut)}
 .howto .code{border-style:dashed;border-color:var(--hot);color:var(--hot)}.howto .code b{letter-spacing:.05em}
@@ -94,24 +96,28 @@ details.filters>summary{display:none}
           <div class="box"><h3>Deal quality</h3><div id="tiers"></div></div>
           <div class="box"><h3>Category</h3><div id="cats"></div></div>
           <div class="box"><h3>Sort by</h3><div id="sorts"></div></div>
+          <div class="box"><h3>Source</h3><div id="srcs"></div></div>
         </div>
       </details>
     </aside>
   </div>
   <div class="how">
-    <b>How deals are chosen.</b> Every morning the site reads the public deal feeds of DealNews, whose editors check prices before posting.
+    <b>How deals are chosen.</b> Every morning the site reads the public deal feeds of DealNews (editors check every price) and Hip2Save, plus the day's top posts from Reddit's deal communities (r/deals, r/buildapcsales, r/laptopdeals, r/frugalmalefashion, r/frugalfemalefashion, r/GameDeals), where upvotes and comments show which deals people rate. Popular deals rank higher.
     It keeps a deal only when the saving is real: <b>Best deals</b> are 50% off or more (or 40%+ at a lowest-ever price or an editors' pick); <b>Average deals</b> are 25–49% off.
     Buy-one-get-one counts as 50%, free items as 100%. <b>Fast food</b> offers from the big chains are included when they are free food, buy-one-get-one, half price or a value meal, and each card says how to claim it (app, code, in store or online). Credit-card cash back, points, sign-up bonuses and financial offers are left out.
     Deals stay up for 10 days; prices can change or sell out, so check the price before you buy.
   </div>
 </main>
-<footer><div class="w">Deal information from <a href="https://www.dealnews.com/">DealNews</a>. Links open the deal on DealNews. Not affiliated with any store.</div></footer>
+<footer><div class="w">Deal information from <a href="https://www.dealnews.com/">DealNews</a>, <a href="https://hip2save.com/">Hip2Save</a> and <a href="https://www.reddit.com/r/deals/">Reddit</a> communities. Not affiliated with any store.</div></footer>
 <script>
 const CATS = ["Fast Food", "Food & Grocery", "Fashion", "Tech", "Home & Household", "Beauty & Health", "Sports & Outdoors", "Toys & Gaming", "Other"];
 const TIERS = [["all", "All deals"], ["best", "Best deals"], ["average", "Average deals"]];
-const SORTS = [["score", "Best value"], ["pct", "Biggest % off"], ["new", "Newest"], ["price", "Lowest price"]];
+const SORTS = [["score", "Best value"], ["pop", "Most talked about"], ["pct", "Biggest % off"], ["new", "Newest"], ["price", "Lowest price"]];
+const SRCS = [["all", "All sources"], ["reddit", "Reddit communities"], ["DealNews", "DealNews editors"], ["Hip2Save", "Hip2Save"]];
+const srcOf = d => (d.src || "DealNews").startsWith("r/") ? "reddit" : (d.src || "DealNews");
+const kfmt = n => n >= 1000 ? (n / 1000).toFixed(n >= 10000 ? 0 : 1) + "k" : String(n);
 const PER = 12;
-let deals = [], st = {tier: "all", cat: "all", sort: "score", q: "", page: 1};
+let deals = [], st = {tier: "all", cat: "all", src: "all", sort: "score", q: "", page: 1};
 const $ = id => document.getElementById(id);
 const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
 const fmt = v => v == null ? "" : "$" + (v >= 100 ? Math.round(v).toLocaleString() : v.toFixed(2).replace(/\.00$/, ""));
@@ -122,6 +128,7 @@ function readUrl() {
   if (TIERS.some(t => t[0] === u.get("tier"))) st.tier = u.get("tier");
   if (CATS.includes(u.get("cat"))) st.cat = u.get("cat");
   if (SORTS.some(s => s[0] === u.get("sort"))) st.sort = u.get("sort");
+  if (SRCS.some(s => s[0] === u.get("src"))) st.src = u.get("src");
   st.q = u.get("q") || ""; st.page = Math.max(1, parseInt(u.get("page")) || 1);
   $("q").value = st.q;
 }
@@ -130,15 +137,16 @@ function writeUrl() {
   if (st.tier !== "all") u.set("tier", st.tier);
   if (st.cat !== "all") u.set("cat", st.cat);
   if (st.sort !== "score") u.set("sort", st.sort);
+  if (st.src !== "all") u.set("src", st.src);
   if (st.q) u.set("q", st.q);
   if (st.page > 1) u.set("page", st.page);
   history.replaceState(null, "", (u.toString() ? "?" + u : location.pathname));
 }
-const matchQ = d => !st.q || (d.t + " " + d.store + " " + d.cat + " " + d.tag).toLowerCase().includes(st.q.toLowerCase());
+const matchQ = d => (st.src === "all" || srcOf(d) === st.src) && (!st.q || (d.t + " " + d.store + " " + d.cat + " " + d.tag + " " + (d.src || "")).toLowerCase().includes(st.q.toLowerCase()));
 function shown() {
   let r = deals.filter(d => (st.tier === "all" || d.tier === st.tier) && (st.cat === "all" || d.cat === st.cat) && matchQ(d));
   const by = {score: (a, b) => b.score - a.score || b.ts - a.ts, pct: (a, b) => b.pct - a.pct || b.score - a.score,
-              new: (a, b) => b.ts - a.ts || b.score - a.score, price: (a, b) => (a.price ?? 1e9) - (b.price ?? 1e9)};
+              new: (a, b) => b.ts - a.ts || b.score - a.score, pop: (a, b) => ((b.votes || 0) + 3 * (b.comments || 0)) - ((a.votes || 0) + 3 * (a.comments || 0)) || b.score - a.score, price: (a, b) => (a.price ?? 1e9) - (b.price ?? 1e9)};
   return r.sort(by[st.sort]);
 }
 function opts(el, list, key, count) {
@@ -158,7 +166,7 @@ function card(d) {
       <h2><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.t)}</a></h2>
       ${d.price != null && d.pct < 100 ? `<div class="price">${fmt(d.price)}${d.was ? `<s>${fmt(d.was)}</s>` : ""}</div>` : ""}
       ${(d.how && d.how.length) || d.code ? `<div class="howto">${(d.how || []).map(x => `<span>${esc(x)}</span>`).join("")}${d.code ? `<span class="code" title="Promo code">Code: <b>${esc(d.code)}</b></span>` : ""}</div>` : ""}
-      <div class="meta"><span class="tag">${esc(d.cat)}</span>${d.store ? `<span>${esc(d.store)}</span>` : ""}<span>${day(d.date)}</span>${d.low ? '<span class="low">Lowest price</span>' : ""}${d.staff ? "<span>Editors' pick</span>" : ""}</div>
+      <div class="meta"><span class="tag">${esc(d.cat)}</span>${d.store ? `<span>${esc(d.store)}</span>` : ""}<span>${day(d.date)}</span><span class="src">${esc(d.src || "DealNews")}</span>${d.votes ? `<a class="pop" href="${esc(d.thread || d.url)}" target="_blank" rel="noopener" title="Upvotes and comments on Reddit">▲ ${kfmt(d.votes)} · ${kfmt(d.comments || 0)} comments</a>` : ""}${d.low ? '<span class="low">Lowest price</span>' : ""}${d.staff ? "<span>Editors' pick</span>" : ""}</div>
       <a class="go" href="${esc(d.url)}" target="_blank" rel="noopener">Get this deal →</a>
     </div></article>`;
 }
@@ -167,6 +175,8 @@ function render() {
   opts($("tiers"), TIERS, "tier", v => base.filter(d => (v === "all" || d.tier === v) && (st.cat === "all" || d.cat === st.cat)).length);
   opts($("cats"), [["all", "All categories"], ...CATS.map(c => [c, c])], "cat", v => base.filter(d => (v === "all" || d.cat === v) && (st.tier === "all" || d.tier === st.tier)).length);
   opts($("sorts"), SORTS, "sort", () => null);
+  const all = deals.filter(d => !st.q || (d.t + " " + d.store + " " + d.cat).toLowerCase().includes(st.q.toLowerCase()));
+  opts($("srcs"), SRCS, "src", v => all.filter(d => (v === "all" || srcOf(d) === v) && (st.tier === "all" || d.tier === st.tier) && (st.cat === "all" || d.cat === st.cat)).length);
   const r = shown(), pages = Math.max(1, Math.ceil(r.length / PER));
   st.page = Math.min(st.page, pages);
   const part = r.slice((st.page - 1) * PER, st.page * PER);
