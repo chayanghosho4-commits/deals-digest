@@ -1,5 +1,5 @@
 {
-"updated": "2026-11-09 21:28 UTC",
+"updated": "2026-11-09 21:39 UTC",
 "source": "DealNews",
 "counts": {
 "Fast Food": {
@@ -20,7 +20,7 @@
 },
 "Home & Household": {
 "best": 32,
-"average": 25
+"average": 26
 },
 "Beauty & Health": {
 "best": 6,
@@ -32,11 +32,11 @@
 },
 "Toys & Gaming": {
 "best": 4,
-"average": 4
+"average": 6
 },
 "Other": {
-"best": 15,
-"average": 4
+"best": 16,
+"average": 2
 }
 },
 "deals": [
@@ -1084,6 +1084,7 @@
 },
 {
 "id": "22355415",
+"src": "DealNews",
 "t": "lululemon We Made Too Much Event: Up to 84% off + free shipping",
 "url": "https://www.dealnews.com/lululemon-We-Made-Too-Much-Event-Up-to-84-off-free-shipping/22355415.html?iref=rss-c202",
 "img": "https://d.dlnws.com/64599/1792231761-imglululemon_yogo_rgb_blk-1658424320863.png?h=200&w=200",
@@ -1719,6 +1720,29 @@
 "code": "MV7N9C28",
 "tier": "best",
 "score": 57
+},
+{
+"id": "22370906",
+"src": "DealNews",
+"t": "Belk One Day Sale: Up to 70% off + free shipping w/ $99",
+"url": "https://www.dealnews.com/Belk-One-Day-Sale-Up-to-70-off-free-shipping-w-99/22370906.html?iref=rss",
+"img": "https://d.dlnws.com/64599/1701448413-dn-image-6654256.png?h=100&w=250",
+"cat": "Other",
+"tag": "",
+"store": "Belk One",
+"price": 99.0,
+"was": null,
+"pct": 56,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794259910,
+"note": "Today only, Belk discounts a wide array of apparel, home goods, and more from brands like Tommy Hilfiger, Kenneth Cole, Dooney & Bourke, Nautica, Clinique, and Michael Kors. Plus, scroll down to find BOGOs, free gifts wi",
+"how": [],
+"code": "",
+"tier": "best",
+"score": 56
 },
 {
 "id": "22370856",
@@ -2842,6 +2866,7 @@
 },
 {
 "id": "22336409",
+"src": "DealNews",
 "t": "Ultra Mobile Ultra-Early Access Savings for 50% off plans, from $6.50/mo.",
 "url": "https://www.dealnews.com/Ultra-Mobile-Ultra-Early-Access-Savings-for-50-off-plans-from-6-50-mo/22336409.html?iref=rss-c142",
 "img": "https://d.dlnws.com/64599/1784647404-ultra-mobile-logo-py99.avif?h=250&w=250",
@@ -2857,6 +2882,8 @@
 "date": "2026-11-02",
 "ts": 1793627669,
 "note": "Ultra Mobile's best deal ever is back with 50% off all its plans with prices starting at $6.50 per month for the 4GB 12-Month Plan ($78 billed upfront). This is the best deal they've offered since last year around this t",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 50
 },
@@ -3237,6 +3264,29 @@
 "score": 44
 },
 {
+"id": "22370889",
+"src": "DealNews",
+"t": "Barbie Dreamplane Playset for $57 + free shipping",
+"url": "https://www.dealnews.com/products/Barbie/Barbie-Dreamplane-Playset/66145.html?iref=rss-c186",
+"img": "https://d.dlnws.com/64599/1794259286-715kliwzgcl.jpg?h=250&w=250",
+"cat": "Toys & Gaming",
+"tag": "",
+"store": "Amazon",
+"price": 57.0,
+"was": 82.0,
+"pct": 30,
+"low": false,
+"hot": true,
+"staff": true,
+"date": "2026-11-09",
+"ts": 1794259388,
+"note": "At Amazon, this Barbie Dreamplane playset is $25 off. The 25-piece set includes a puppy, a snack cart, a travel bag, and two blankets. Barbie dolls are sold separately. Shipping is free. Buy Now at Amazon . Features meas",
+"how": [],
+"code": "",
+"tier": "average",
+"score": 43
+},
+{
 "id": "h2s:11892355",
 "src": "Hip2Save",
 "t": "Cordless Drill & 142-Piece Tool Set Just $39.89 Shipped on Amazon (Reg. $70)",
@@ -3402,9 +3452,9 @@
 "id": "22370870",
 "src": "DealNews",
 "t": "Star Wars: The Phantom Menace Battle Droid with STAP for $84 + free shipping",
-"url": "https://www.dealnews.com/products/LEGO/Star-Wars-The-Phantom-Menace-Battle-Droid-with-STAP/496339.html?iref=rss",
+"url": "https://www.dealnews.com/products/LEGO/Star-Wars-The-Phantom-Menace-Battle-Droid-with-STAP/496339.html?iref=rss-c186",
 "img": "https://d.dlnws.com/64599/1794258635-81i1gbyc2fl.jpg?h=250&w=250",
-"cat": "Other",
+"cat": "Toys & Gaming",
 "tag": "",
 "store": "Amazon",
 "price": 84.0,
@@ -4187,29 +4237,6 @@
 "score": 31
 },
 {
-"id": "22370889",
-"src": "DealNews",
-"t": "Barbie Dreamplane Playset for $57 + free shipping",
-"url": "https://www.dealnews.com/products/Barbie/Barbie-Dreamplane-Playset/66145.html?iref=rss",
-"img": "https://d.dlnws.com/64599/1794259286-715kliwzgcl.jpg?h=250&w=250",
-"cat": "Other",
-"tag": "",
-"store": "Amazon",
-"price": 57.0,
-"was": 82.0,
-"pct": 30,
-"low": false,
-"hot": false,
-"staff": false,
-"date": "2026-11-09",
-"ts": 1794259388,
-"note": "At Amazon, this Barbie Dreamplane playset is $25 off. The 25-piece set includes a puppy, a snack cart, a travel bag, and two blankets. Barbie dolls are sold separately. Shipping is free. Buy Now at Amazon . Features meas",
-"how": [],
-"code": "",
-"tier": "average",
-"score": 30
-},
-{
 "id": "h2s:10634257",
 "src": "Hip2Save",
 "t": "Funko Bitty POP! Star Wars Advent Calendar Only $24.49 on Amazon (Reg. $35)",
@@ -4261,7 +4288,7 @@
 "id": "22370270",
 "src": "DealNews",
 "t": "Black Friday Sale at The Jacket Maker: Up to 25% off + extra 12% off + free shipping",
-"url": "https://www.dealnews.com/Black-Friday-Sale-at-The-Jacket-Maker-Up-to-25-off-extra-12-off-free-shipping/22370270.html?iref=rss-c202",
+"url": "https://www.dealnews.com/Black-Friday-Sale-at-The-Jacket-Maker-Up-to-25-off-extra-12-off-free-shipping/22370270.html?iref=rss",
 "img": "https://d.dlnws.com/64599/1794231494-product-trimmed.png?h=250&w=250",
 "cat": "Fashion",
 "tag": "",
@@ -4379,6 +4406,29 @@
 "code": "",
 "tier": "average",
 "score": 27
+},
+{
+"id": "22342149",
+"src": "DealNews",
+"t": "Kids Vanity with LED Mirror and Chair Set for $104 + free shipping",
+"url": "https://www.dealnews.com/Kids-Vanity-with-LED-Mirror-and-Chair-Set-for-104-free-shipping/22342149.html?iref=rss-c196",
+"img": "https://d.dlnws.com/64599/1793720584-draftworks_img_083p5drrfdccffmgbmc.jpeg?h=250&w=250",
+"cat": "Home & Household",
+"tag": "",
+"store": "Amazon",
+"price": 104.0,
+"was": 139.5,
+"pct": 25,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794259610,
+"note": "Kids who love getting ready alongside mom or dad will get a kick out of having their own light-up mirror and matching chair, and the set rings up at $104.49, which is $35.50 off the $139.99 list price. Buy Now at Amazon ",
+"how": [],
+"code": "",
+"tier": "average",
+"score": 25
 },
 {
 "id": "h2s:11771938",
