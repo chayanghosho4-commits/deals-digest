@@ -1,60 +1,167 @@
 {
-"updated": "2026-11-09 21:04 UTC",
+"updated": "2026-11-09 21:13 UTC",
 "source": "DealNews",
 "counts": {
+"Fast Food": {
+"best": 4,
+"average": 9
+},
 "Food & Grocery": {
 "best": 4,
 "average": 7
 },
 "Fashion": {
 "best": 19,
-"average": 12
+"average": 13
 },
 "Tech": {
-"best": 12,
-"average": 7
+"best": 13,
+"average": 8
 },
 "Home & Household": {
 "best": 22,
-"average": 21
+"average": 22
 },
 "Beauty & Health": {
 "best": 4,
 "average": 5
 },
 "Sports & Outdoors": {
-"best": 8,
+"best": 7,
 "average": 1
 },
 "Toys & Gaming": {
-"best": 2,
-"average": 2
+"best": 1,
+"average": 3
 },
 "Other": {
-"best": 13,
-"average": 1
+"best": 12,
+"average": 0
 }
 },
 "deals": [
 {
-"id": "22369979",
-"t": "Free Country Freedom Sale: 40% off + free shipping w/ $99",
-"url": "https://www.dealnews.com/Free-Country-Freedom-Sale-40-off-free-shipping-w-99/22369979.html?iref=rss-c202",
-"img": "https://d.dlnws.com/64599/1794214039-product-trimmed.png?h=250&w=250",
-"cat": "Fashion",
+"id": "22370267",
+"t": "Arby's Delivery: Free all month",
+"url": "https://www.dealnews.com/Arbys-Delivery-Free-all-month/22370267.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1794231146-product-trimmed.jpg?h=213&w=250",
+"cat": "Fast Food",
 "tag": "",
-"store": "Free Country",
-"price": 99.0,
+"store": "Arby's",
+"price": null,
 "was": null,
 "pct": 100,
 "low": false,
 "hot": true,
+"staff": true,
+"date": "2026-11-09",
+"ts": 1794231152,
+"note": "Arby's offers free delivery all month long (via the app) for its Loaded Rewards members. (Not a member? It's free to join.) Shop Now at Arby's .",
+"how": [
+"In the app",
+"Free rewards account",
+"Delivery"
+],
+"code": "",
+"tier": "best",
+"score": 113
+},
+{
+"id": "22333033",
+"t": "AliExpress Singles Day Sale: Up to 77% off + extra $3 to $155 off + free shipping",
+"url": "https://www.dealnews.com/Ali-Express-Singles-Day-Sale-Up-to-77-off-extra-3-to-155-off-free-shipping/22333033.html?iref=rss-c142",
+"img": "https://d.dlnws.com/64599/1779904978-1778166113-1778079469-2026-05-06_10-57-29.png?h=62&w=250",
+"cat": "Tech",
+"tag": "",
+"store": "AliExpress",
+"price": 3.0,
+"was": 158.0,
+"pct": 98,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-01",
+"ts": 1793538214,
+"note": "AliExpress is running its Singles Day Sale with markdowns of up to 77% off. This is AliExpress's biggest sale event of the year, so you're gonna find the best deals in months at the store right now, especially on items e",
+"how": [
+"Delivery"
+],
+"code": "",
+"tier": "best",
+"score": 103
+},
+{
+"id": "22370219",
+"t": "Wingstop Chicken Sandwich: Free w/ purchase",
+"url": "https://www.dealnews.com/Wingstop-Chicken-Sandwich-Free-w-purchase/22370219.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1794228574-ncsd_hero_mobile.png?h=154&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "Wingstop",
+"price": null,
+"was": null,
+"pct": 100,
+"low": false,
+"hot": false,
 "staff": false,
 "date": "2026-11-09",
-"ts": 1794214045,
-"note": "Free Country's Freedom Sale takes 40% off with promo code \"FREEDOM\". The Fall Edit covers women's and men's jackets & vests, including fleece, sherpa, quilted, faux-suede, and barn-style jackets, plus flannel shirts and ",
+"ts": 1794228582,
+"note": "For National Chicken Sandwich Day, members get a free sandwich with a qualifying purchase. Available at participating locations. Shop Now at Wingstop .",
+"how": [
+"Free rewards account",
+"In store"
+],
+"code": "",
 "tier": "best",
-"score": 105
+"score": 100
+},
+{
+"id": "22355498",
+"t": "Upcoming: Wingstop Chicken Sandwich: Free w/ Purchase",
+"url": "https://www.dealnews.com/Upcoming-Wingstop-Chicken-Sandwich-Free-w-Purchase/22355498.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1793964448-chicken_sandwich.png?h=141&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "Wingstop",
+"price": null,
+"was": null,
+"pct": 100,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-06",
+"ts": 1793964460,
+"note": "On November 8 and 9, get a free Chicken Sandwich at Wingstop with a purchase. Available at participating locations. Shop Now at Wingstop .",
+"how": [
+"In store"
+],
+"code": "",
+"tier": "best",
+"score": 100
+},
+{
+"id": "22370848",
+"t": "Macy's Early Black Friday Men's Coat & Jacket Deals: Up to 76% off + free shipping w/ $39",
+"url": "https://www.dealnews.com/Macys-Early-Black-Friday-Mens-Coat-Jacket-Deals-Up-to-76-off-free-shipping-w-39/22370848.html?iref=rss-c202",
+"img": "https://d.dlnws.com/64599/1794257667-34315382_fpx.webp?h=250&w=204",
+"cat": "Fashion",
+"tag": "",
+"store": "Macy's",
+"price": 39.0,
+"was": 208.0,
+"pct": 81,
+"low": false,
+"hot": true,
+"staff": true,
+"date": "2026-11-09",
+"ts": 1794257675,
+"note": "Macy's men's coats & jackets are marked up to 76% off covering more than 500 items. Puffers, parkas, wool overcoats, and leather jackets from The North Face, Calvin Klein, Michael Kors, and Tommy Hilfiger are included. W",
+"how": [
+"Free rewards account"
+],
+"code": "",
+"tier": "best",
+"score": 99
 },
 {
 "id": "22355448",
@@ -73,6 +180,8 @@
 "date": "2026-11-07",
 "ts": 1794057503,
 "note": "Fanatics has just dropped a new promo code, \"MERRY\", which takes up to 50% off across the store. It applies to most items in the Nike section, yielding discounts as high as 86%. Here's how it breaks down: the coupon cuts",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 99
 },
@@ -83,7 +192,7 @@
 "img": "https://d.dlnws.com/64599/1793870931-product-trimmed.jpg?h=188&w=250",
 "cat": "Fashion",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 1.0,
 "was": 15.0,
 "pct": 93,
@@ -93,28 +202,12 @@
 "date": "2026-11-05",
 "ts": 1793870938,
 "note": "New Woot customers can get one of Woot's weird and wonderful graphic T-shirts for just a buck right now, thanks to the promo code \"NOVDOLLARTEE\". The coupon is knocking $14 off the regular price of $15 and it's obviously",
+"how": [
+"Free rewards account"
+],
+"code": "NOVDOLLARTEE",
 "tier": "best",
 "score": 93
-},
-{
-"id": "22369965",
-"t": "HDX 6.5-Quart Tough Storage Tote 4-Pack for $8 + free shipping",
-"url": "https://www.dealnews.com/HDX-6-5-Quart-Tough-Storage-Tote-4-Pack-for-8-free-shipping/22369965.html?iref=rss-hotness",
-"img": "https://d.dlnws.com/64599/1794212088-product-trimmed.jpg?h=191&w=250",
-"cat": "Tech",
-"tag": "",
-"store": "Home Depot",
-"price": 2.0,
-"was": 14.0,
-"pct": 86,
-"low": false,
-"hot": true,
-"staff": false,
-"date": "2026-11-09",
-"ts": 1794212094,
-"note": "This HDX 6.5-qt. tote 4-pack is $8 at Home Depot, which works out to $2 per tote, down from $14. Shipping is free. Buy Now at Home Depot .",
-"tier": "best",
-"score": 91
 },
 {
 "id": "22341754",
@@ -123,7 +216,7 @@
 "img": "https://d.dlnws.com/64599/1794222696-product-trimmed.jpg?h=250&w=247",
 "cat": "Other",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 250.0,
 "was": 695.0,
 "pct": 79,
@@ -133,6 +226,10 @@
 "date": "2026-11-09",
 "ts": 1794222706,
 "note": "Woot's Debut Deals clearance sale spans home goods, electronics, fitness gear, camping equipment, pet supplies, jewelry, watches, and apparel, with discounts reaching as high as 79% off. Hudson Women Barbara high-rise ba",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 89
 },
@@ -153,6 +250,8 @@
 "date": "2026-11-09",
 "ts": 1794230841,
 "note": "With promo code \"USAFF25\", this Red Star 1963 chronograph watch costs $116 at AliExpress, down from $517. Plus, shipping is free from a U.S. warehouse. The 1963 design recreates the chronograph that China's Tianjin Watch",
+"how": [],
+"code": "USAFF25",
 "tier": "best",
 "score": 88
 },
@@ -161,7 +260,7 @@
 "t": "Blink Outdoor 4 & Battery Doorbell 2K+ Bundle for $28 + free shipping w/ Prime",
 "url": "https://www.dealnews.com/Blink-Outdoor-4-Battery-Doorbell-2-K-Bundle-for-28-free-shipping-w-Prime/22370193.html?iref=rss-hotness",
 "img": "https://d.dlnws.com/64599/1794227873-product-trimmed.jpg?h=210&w=250",
-"cat": "Sports & Outdoors",
+"cat": "Tech",
 "tag": "",
 "store": "Amazon",
 "price": 28.0,
@@ -173,6 +272,11 @@
 "date": "2026-11-09",
 "ts": 1794227880,
 "note": "This Blink Outdoor 4 camera and Wired Doorbell 2K+ bundle is $102 off at Amazon, a drop from the $130 regular price. It's the best deal we've seen for this bundle. The bundle includes the Sync Module Core and batteries f",
+"how": [
+"In the app",
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 88
 },
@@ -193,28 +297,10 @@
 "date": "2026-11-08",
 "ts": 1794138600,
 "note": "Nordstrom Rack's ever-popular Clear the Rack event is now open to everyone. Everything in this clearance sale is discounted by an extra 25%. This stacks with existing discounts, already as high as 94%. It's the best time",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 88
-},
-{
-"id": "22370848",
-"t": "Macy's Early Black Friday Men's Coat & Jacket Deals: Up to 76% off + free shipping w/ $39",
-"url": "https://www.dealnews.com/Macys-Early-Black-Friday-Mens-Coat-Jacket-Deals-Up-to-76-off-free-shipping-w-39/22370848.html?iref=rss",
-"img": "https://d.dlnws.com/64599/1794257667-34315382_fpx.webp?h=250&w=204",
-"cat": "Fashion",
-"tag": "",
-"store": "Macy's",
-"price": 39.0,
-"was": 208.0,
-"pct": 81,
-"low": false,
-"hot": false,
-"staff": false,
-"date": "2026-11-09",
-"ts": 1794257675,
-"note": "Macy's men's coats & jackets are marked up to 76% off covering more than 500 items. Puffers, parkas, wool overcoats, and leather jackets from The North Face, Calvin Klein, Michael Kors, and Tommy Hilfiger are included. W",
-"tier": "best",
-"score": 86
 },
 {
 "id": "22370459",
@@ -233,6 +319,8 @@
 "date": "2026-11-09",
 "ts": 1794240313,
 "note": "With promo code \"DBDEAL3\", this PAWZ Road cat desk bed drops to $26 at AliExpress, down from $128. Shipping is free from a US warehouse. This deal ends November 18. . New to AliExpress? Our guide on AliExpress Promo Code",
+"how": [],
+"code": "DBDEAL3",
 "tier": "best",
 "score": 85
 },
@@ -253,33 +341,17 @@
 "date": "2026-11-09",
 "ts": 1794216084,
 "note": "At Amazon, get this Breathe Right Extra Strength Clear Nasal Strips 44-Count Pack for $7.30 when you clip the on-page coupon and check out with Subscribe & Save. It's the best price we could find by $11. Shipping is free",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 83
 },
 {
-"id": "22370605",
-"t": "Marathon Multifold 1-Ply Paper Towels 16-Pack for $32 + free shipping w/ $75",
-"url": "https://www.dealnews.com/Marathon-Multifold-1-Ply-Paper-Towels-16-Pack-for-32-free-shipping-w-75/22370605.html?iref=rss-c637",
-"img": "https://d.dlnws.com/64599/1794246710-12251-847-1.jpeg?h=250&w=250",
-"cat": "Home & Household",
-"tag": "",
-"store": "Costco",
-"price": 7.5,
-"was": 40.0,
-"pct": 81,
-"low": false,
-"hot": false,
-"staff": false,
-"date": "2026-11-09",
-"ts": 1794246717,
-"note": "At Costco, these Marathon paper towels are $7.50 off, down from $40. That works out to about $2 per pack of 250 sheets. Spend $75 on eligible items for free shipping. Otherwise, shipping adds $3. The manufacturer savings",
-"tier": "best",
-"score": 81
-},
-{
 "id": "22370849",
 "t": "Glycine Men's Combat Field GL0559 Automatic Watch for $359 + free shipping",
-"url": "https://www.dealnews.com/Glycine-Mens-Combat-Field-GL0559-Automatic-Watch-for-359-free-shipping/22370849.html?iref=rss",
+"url": "https://www.dealnews.com/Glycine-Mens-Combat-Field-GL0559-Automatic-Watch-for-359-free-shipping/22370849.html?iref=rss-c202",
 "img": "https://d.dlnws.com/64599/1794257675-gl0559_f_dacb81d4-0c07-450d-ba6f-852cd0250dfa.jpg?h=250&w=250",
 "cat": "Fashion",
 "tag": "",
@@ -293,6 +365,8 @@
 "date": "2026-11-09",
 "ts": 1794257681,
 "note": "With promo code \"DNGLY359\", this Glycine Combat Field watch drops to $359 at Ashford, down from $1,350. The Combat Field runs on a Sellita SW200-1 automatic movement with a 38-hour power reserve, so it will stop if left ",
+"how": [],
+"code": "DNGLY359",
 "tier": "best",
 "score": 78
 },
@@ -313,6 +387,8 @@
 "date": "2026-11-09",
 "ts": 1794247961,
 "note": "With promo code \"DNPMEGA20\", the Padilla #2 Megatron 20-Cigar Sampler costs $59 at Cigar Page, down from $216. The sampler spreads four cigars each across five Padilla lines, so the blends can be compared side by side. T",
+"how": [],
+"code": "DNPMEGA20",
 "tier": "best",
 "score": 78
 },
@@ -323,7 +399,7 @@
 "img": "https://d.dlnws.com/64599/1794222776-product-trimmed.jpg?h=168&w=250",
 "cat": "Fashion",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 85.0,
 "was": 220.0,
 "pct": 68,
@@ -333,6 +409,10 @@
 "date": "2026-11-09",
 "ts": 1794222787,
 "note": "Woot has dropped an Open Box: Shoe Box clearance with footwear, sunglasses, handbags, and clothing from brands like Birkenstock, Skechers, Maui Jim, Ray-Ban, and Nike. Nike Men's Air Max DN8s are $85 (instead of $220), a",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 78
 },
@@ -353,6 +433,10 @@
 "date": "2026-11-09",
 "ts": 1794231944,
 "note": "This Iron Flask Co-Pilot 40-oz. Insulated Travel Mug is 56% off at Amazon. It's the best price we could find by $22. The 40-oz. mug comes with both a straw lid and a flip lid. Shipping is free for Prime members. Buy Now ",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 77
 },
@@ -373,6 +457,10 @@
 "date": "2026-11-09",
 "ts": 1794224576,
 "note": "In this Macy's clearance sale you'll find deep discounts of up to 90% off a large selection of clothing, shoes, home items, luggage, and more. Star Rewards members receive free shipping on orders over $39 (it's free to j",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 77
 },
@@ -393,6 +481,8 @@
 "date": "2026-11-09",
 "ts": 1794216236,
 "note": "Fanatical has the Yu-Gi-Oh! Early Days Collection at $11, which is 77% off. The collection bundles 14 classic Yu-Gi-Oh! games, several of which were never released outside Japan. Buy Now at Fanatical .",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 77
 },
@@ -413,6 +503,8 @@
 "date": "2026-11-08",
 "ts": 1794140940,
 "note": "vipoutlet's eBay store has some of eBay's best deals on electronics, gaming gear, and home goods, especially since the promo code \"VIPTAKE8OCTOBER\" now takes an extra 8% off everything. Refurbs include a 1- or 2-year All",
+"how": [],
+"code": "VIPTAKE8OCTOBER",
 "tier": "best",
 "score": 77
 },
@@ -423,7 +515,7 @@
 "img": "https://d.dlnws.com/64599/1793188246-product-trimmed.jpg?h=189&w=250",
 "cat": "Other",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": null,
 "was": null,
 "pct": 64,
@@ -433,6 +525,10 @@
 "date": "2026-11-08",
 "ts": 1794140280,
 "note": "Woot's Liquidation Sale clears out inventory across home, electronics, tools & garden, sports, and computers, along with a section of liquidation tees. Prime members get free standard shipping on Woot orders. The sale en",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 77
 },
@@ -453,6 +549,8 @@
 "date": "2026-11-09",
 "ts": 1794236636,
 "note": "With promo code \"USAFF70\", this foldable electric scooter costs $283 at AliExpress, down from $967. It ships free from a U.S. location, and the price is limited to one per shopper. This deal ends November 18. New to AliE",
+"how": [],
+"code": "USAFF70",
 "tier": "best",
 "score": 76
 },
@@ -473,15 +571,19 @@
 "date": "2026-11-05",
 "ts": 1793919372,
 "note": "This Anchor Hocking 20-Piece Bake, Store & Mix Set is 76% off at Macy's during the Last Act sale, and the price covers baking dishes, mixing bowls, and storage containers with lids. Last Act items are final sale, so no r",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 76
 },
 {
 "id": "22370827",
 "t": "Macy's Black Friday Men's Suit Deals: Up to 75% off + free shipping w/ $39",
-"url": "https://www.dealnews.com/Macys-Black-Friday-Mens-Suit-Deals-Up-to-75-off-free-shipping-w-39/22370827.html?iref=rss",
+"url": "https://www.dealnews.com/Macys-Black-Friday-Mens-Suit-Deals-Up-to-75-off-free-shipping-w-39/22370827.html?iref=rss-c202",
 "img": "https://d.dlnws.com/64599/1794257115-27432045_fpx.webp?h=250&w=205",
-"cat": "Other",
+"cat": "Fashion",
 "tag": "",
 "store": "Macy's",
 "price": 39.0,
@@ -493,26 +595,10 @@
 "date": "2026-11-09",
 "ts": 1794257122,
 "note": "Macy's Black Friday men's suit deals reach 75% off on brands like HUGO, Tommy Hilfiger, Michael Kors, and Kenneth Cole Reaction. The DKNY Modern-Fit 2-Piece Suit is 75% off at $100, with Nautica and Marc New York by Andr",
-"tier": "best",
-"score": 75
-},
-{
-"id": "22370400",
-"t": "Wayfair 72-Hour Clearout Sale: Up to 60% off + free shipping w/ $35",
-"url": "https://www.dealnews.com/Wayfair-72-Hour-Clearout-Sale-Up-to-60-off-free-shipping-w-35/22370400.html?iref=rss-c196",
-"img": "https://d.dlnws.com/64599/1778176899-wayfair-2024-logo.png?h=58&w=250",
-"cat": "Home & Household",
-"tag": "",
-"store": "Wayfair",
-"price": 85.0,
-"was": 280.0,
-"pct": 70,
-"low": false,
-"hot": false,
-"staff": false,
-"date": "2026-11-09",
-"ts": 1794237670,
-"note": "Wayfair's 72-Hour Clearout puts rugs, beds, accent cabinets, bedding, and decor on sale, with the steepest markdowns on rugs and bedroom furniture. The Mendota indoor/outdoor area rug is $85, down from $280, and the Stau",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 75
 },
@@ -533,6 +619,10 @@
 "date": "2026-11-09",
 "ts": 1794224707,
 "note": "Macy's Black Friday Sale has kicked off. Inside, you'll find discounts of up to 70% off on apparel, shoes, small appliances, furniture, luggage, and much more. The sale will be refreshed with new offers every Friday in t",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 75
 },
@@ -553,6 +643,8 @@
 "date": "2026-11-09",
 "ts": 1794234658,
 "note": "With promo code \"SHOPBRANDS20\", these adidas Men's Advantage shoes come to $20 at eBay, down from $75. The Advantage design is based on classic tennis shoes and has a Cloudfoam cushioned midsole. They are in Cloud White/",
+"how": [],
+"code": "SHOPBRANDS20",
 "tier": "best",
 "score": 73
 },
@@ -563,7 +655,7 @@
 "img": "https://d.dlnws.com/64599/1794230492-s-l1600.jpg?h=250&w=250",
 "cat": "Other",
 "tag": "",
-"store": "",
+"store": "Dyson Outlet",
 "price": null,
 "was": null,
 "pct": 60,
@@ -573,6 +665,8 @@
 "date": "2026-11-09",
 "ts": 1794230499,
 "note": "Using promo code \"SHOPBRANDS20\" at eBay, certified refurbished Dyson vacuums, hair tools, and air purifiers drop in price, with the discount capped at $500 across up to two orders. The coupon code works on refurbished va",
+"how": [],
+"code": "SHOPBRANDS20",
 "tier": "best",
 "score": 73
 },
@@ -593,26 +687,8 @@
 "date": "2026-11-09",
 "ts": 1794240377,
 "note": "Spills on couches or car seats are easier to tackle when you have something this size on hand, since it's compact enough to store under a sink but still handles carpet stains too; right now it's $70 off the $100 list pri",
-"tier": "best",
-"score": 70
-},
-{
-"id": "22350721",
-"t": "Walmart Holiday Rollback Deals on Toys: Up to 50% off + free shipping w/ $35",
-"url": "https://www.dealnews.com/Walmart-Holiday-Rollback-Deals-on-Toys-Up-to-50-off-free-shipping-w-35/22350721.html?iref=rss-c186",
-"img": "https://d.dlnws.com/64599/1793873827-product-trimmed.jpg?h=214&w=250",
-"cat": "Toys & Gaming",
-"tag": "",
-"store": "Walmart",
-"price": 10.0,
-"was": 33.0,
-"pct": 70,
-"low": false,
-"hot": false,
-"staff": false,
-"date": "2026-11-05",
-"ts": 1793873834,
-"note": "Walmart is offering Rollback prices on toys and games across building sets, dolls, action figures, plush, and card games, all in time for the holidays. Prices start at $3, with a Honey Bee Acres collectible mystery bag a",
+"how": [],
+"code": "6K3T8KE2",
 "tier": "best",
 "score": 70
 },
@@ -633,13 +709,18 @@
 "date": "2026-11-09",
 "ts": 1794253264,
 "note": "Lowe's Online Only Deals Monday is mostly bathroom vanities, with savings up to 45% on select allen + roth models like the Wrightsville and Elstow. We've pictured the allen roth Lambert 30\" Undermount Single Sink Bathroo",
+"how": [
+"Free rewards account",
+"Online"
+],
+"code": "",
 "tier": "best",
 "score": 69
 },
 {
 "id": "22370221",
 "t": "Macy's Black Friday Sale Men's Watch Deals: Up to 80% off + free shipping w/ $39",
-"url": "https://www.dealnews.com/Macys-Black-Friday-Sale-Mens-Watch-Deals-Up-to-80-off-free-shipping-w-39/22370221.html?iref=rss-c202",
+"url": "https://www.dealnews.com/Macys-Black-Friday-Sale-Mens-Watch-Deals-Up-to-80-off-free-shipping-w-39/22370221.html?iref=rss-hotness",
 "img": "https://d.dlnws.com/64599/1794228891-product-trimmed.jpg?h=250&w=174",
 "cat": "Fashion",
 "tag": "",
@@ -653,6 +734,10 @@
 "date": "2026-11-09",
 "ts": 1794228898,
 "note": "Macy's Black Friday jewelry & watches sale includes 98 men's watches, with most of the lineup from Stuhrling. Alexander Swiss-made divers and automatic chronographs, Vincero automatics, and Elton Pepple 38mm styles are a",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 69
 },
@@ -673,6 +758,10 @@
 "date": "2026-11-09",
 "ts": 1794228701,
 "note": "Macy's Black Friday men's fragrance sale spans 135 items from designer names like Tom Ford, Givenchy, Prada, and Dolce&Gabbana. Gift sets are a big part of the mix, with 4-piece sets from Calvin Klein and Dolce&Gabbana, ",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 69
 },
@@ -683,7 +772,7 @@
 "img": "https://d.dlnws.com/64599/1794222437-product-trimmed.jpg?h=250&w=250",
 "cat": "Tech",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 550.0,
 "was": 700.0,
 "pct": 59,
@@ -693,6 +782,10 @@
 "date": "2026-11-09",
 "ts": 1794222443,
 "note": "Woot's Holiday Prime Exclusive Store runs through December 1 and mixes camera gear, PC parts, kitchen appliances, clothing, and gaming accessories. Among the cameras, the Canon RF 100-400mm lens is $550, down from $700, ",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 69
 },
@@ -703,7 +796,7 @@
 "img": "https://d.dlnws.com/64599/1794220408-product-trimmed.jpg?h=197&w=250",
 "cat": "Beauty & Health",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": null,
 "was": null,
 "pct": 64,
@@ -713,6 +806,10 @@
 "date": "2026-11-09",
 "ts": 1794220415,
 "note": "Here you'll find a selection of discounted men's and women's fragrances. Even better, you'll get an extra 10% off at checkout, or if you're buying two or more you'll get an extra 25% off automatically. Shipping is free f",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 69
 },
@@ -723,7 +820,7 @@
 "img": "https://d.dlnws.com/64599/1793619910-product-trimmed.jpg?h=200&w=161",
 "cat": "Other",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": null,
 "was": null,
 "pct": 56,
@@ -733,6 +830,10 @@
 "date": "2026-11-08",
 "ts": 1794141180,
 "note": "Woot's Closet Cleanout event groups apparel, bags, and accessories for men, women, and kids into one sale, with items sorted by size for quicker browsing. Prime members get free shipping. This deal ends December 30. Shop",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 69
 },
@@ -753,6 +854,8 @@
 "date": "2026-11-09",
 "ts": 1794242905,
 "note": "At Amazon, this National Tree Company North Valley Spruce is 54% off. Its price is also below the 90-day average of $85. It is pre-lit with 200 clear lights and includes a metal stand. Shipping is free. Buy Now at Amazon",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 67
 },
@@ -763,7 +866,7 @@
 "img": "https://d.dlnws.com/64599/1793781646-product-trimmed.jpg?h=174&w=250",
 "cat": "Home & Household",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 226.99,
 "was": 599.99,
 "pct": 62,
@@ -773,6 +876,10 @@
 "date": "2026-11-07",
 "ts": 1794040947,
 "note": "Woot has a sale on a selection of refurbished Shark and Ninja appliances in \"Scratch & Dent\" condition. The sale includes a wide mix of Shark vacuums and Ninja kitchen appliances, with Shark cordless and robot models sta",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 67
 },
@@ -793,6 +900,8 @@
 "date": "2026-11-06",
 "ts": 1793955385,
 "note": "lululemon's We Made Too Much event was refreshed with new styles, with the highest reductions now reaching up to 84%. The Fast and Free High-Rise Thermal Tight 28\" is 67% off, and the ABC Warpstreme Jogger is 58% off. Al",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 67
 },
@@ -803,7 +912,7 @@
 "img": "https://d.dlnws.com/64599/1794222939-product-trimmed.jpg?h=136&w=239",
 "cat": "Tech",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 45.0,
 "was": 115.0,
 "pct": 61,
@@ -813,6 +922,10 @@
 "date": "2026-11-09",
 "ts": 1794222945,
 "note": "Woot's Computers Warehouse Clean Out covers open-box laptops, desktops, monitors, WiFi routers, keyboards, and PC parts, with discounts up to 61% off listed reference prices. The Kensington Dual Display Dock for MacBooks",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 66
 },
@@ -823,7 +936,7 @@
 "img": "https://d.dlnws.com/64599/1793271659-product-trimmed.jpg?h=209&w=250",
 "cat": "Sports & Outdoors",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 109.0,
 "was": 278.0,
 "pct": 61,
@@ -833,6 +946,8 @@
 "date": "2026-11-08",
 "ts": 1794139440,
 "note": "Woot's Sports Liquidation Sale spans apparel, footwear, watches, bags, and outdoor gear from brands such as Under Armour, Dr. Martens, Skechers, Levi's, and Fossil. Under Armour Fly By shorts start at $17, Hanes Sport Co",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 66
 },
@@ -853,6 +968,11 @@
 "date": "2026-11-09",
 "ts": 1794249079,
 "note": "Ending today, Levi's is taking up to 65% off sale styles, with an extra 30%, 40%, or 50% off on top of the marked sale prices. The sale covers jeans, jackets, shirts, and T-shirts for men, women, and kids. Sale styles ar",
+"how": [
+"Free rewards account",
+"Online"
+],
+"code": "",
 "tier": "best",
 "score": 65
 },
@@ -863,7 +983,7 @@
 "img": "https://d.dlnws.com/64599/1794219857-product-trimmed.jpg?h=250&w=238",
 "cat": "Sports & Outdoors",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": null,
 "was": null,
 "pct": 60,
@@ -873,6 +993,10 @@
 "date": "2026-11-09",
 "ts": 1794219865,
 "note": "Woot's Deck the Halls with Team Spirit sale covers licensed gear from the NFL, NCAA, MLB, NHL, and NBA. NFL team blankets start at $30, and JanSport NCAA backpacks start at $18. The mix also includes cornhole sets, tumbl",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 65
 },
@@ -883,7 +1007,7 @@
 "img": "https://d.dlnws.com/64599/1794183780-product-trimmed.png?h=173&w=250",
 "cat": "Fashion",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": null,
 "was": null,
 "pct": 64,
@@ -893,6 +1017,10 @@
 "date": "2026-11-09",
 "ts": 1794183787,
 "note": "Woot discounts a selection of Crocs Jibbitz shoe charm packs with prices ranging from $7.99 to $9.99. Prime members get free shipping. This deal ends November 10th. Shop Now at Woot! An Amazon Company . Features Shoe cha",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 64
 },
@@ -913,6 +1041,10 @@
 "date": "2026-11-08",
 "ts": 1794139260,
 "note": "These men's joggers are 51% off at Amazon. Shipping is free for Prime members. Buy Now at Amazon . Features 83% polyester and 17% spandex fabric with medium stretch . Lightweight fabric . Drawstring waist with zippered p",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 64
 },
@@ -933,6 +1065,10 @@
 "date": "2026-11-09",
 "ts": 1794246136,
 "note": "This Greenmade 12-gallon storage bin 4-pack is $33.99 off at Costco. It's the best price we found by $6. The bins are NSF certified and made in the USA. Lid slots accept padlocks or zip ties, and the bins nest together w",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 63
 },
@@ -953,6 +1089,8 @@
 "date": "2026-11-09",
 "ts": 1794232259,
 "note": "Ending today, the Fanatics Holiday Head Start sale features promo code \"GIFTS\", which takes between 25% and 50% off most items, including in-season NFL, MLB, NBA, and other sports merch. Head to the clearance section and",
+"how": [],
+"code": "GIFTS",
 "tier": "best",
 "score": 63
 },
@@ -993,6 +1131,8 @@
 "date": "2026-11-04",
 "ts": 1793796016,
 "note": "ACTIVE Heavy Duty Appliance Surface Cleaner Wipes are $11 for a first-time Sub & Save order when you also use coupon code \"K9BRSTAP\". That's $12 off and the best price we could find. Each oversized wipe is 10 x 8 inches ",
+"how": [],
+"code": "K9BRSTAP",
 "tier": "best",
 "score": 62
 },
@@ -1003,7 +1143,7 @@
 "img": "https://d.dlnws.com/64599/1782203708-woot-logo-amazon-company-1ecw.png?h=168&w=250",
 "cat": "Other",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": null,
 "was": null,
 "pct": 56,
@@ -1013,6 +1153,10 @@
 "date": "2026-11-09",
 "ts": 1794222878,
 "note": "Woot's Gifts for Everyone clearance event sorts its holiday gift picks by recipient, from techies and DIY-ers to kids, pets, and beauty fans, plus white elephant and office-exchange options and gifts you can eat. Prime m",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 61
 },
@@ -1023,7 +1167,7 @@
 "img": "https://d.dlnws.com/64599/1794041995-product-trimmed.jpg?h=207&w=250",
 "cat": "Home & Household",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 252.0,
 "was": 400.0,
 "pct": 56,
@@ -1033,6 +1177,10 @@
 "date": "2026-11-07",
 "ts": 1794042001,
 "note": "Woot is running a countertop kitchen appliance sale right now, with discounts as high as 71% on air fryers, espresso machines, blenders, toasters, juicers, and ice makers. The Ninja Woodfire Oven and Smoker (pictured) is",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 61
 },
@@ -1053,6 +1201,8 @@
 "date": "2026-11-09",
 "ts": 1794248399,
 "note": "With promo code \"bmwing\", these Bruno Marc CrossFlex NeatPolish+ wingtip dress sneakers drop to $25 at Bruno Marc, down from $62. The code is good through November 20, and shipping is free. Buy Now at Bruno Marc . Featur",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 60
 },
@@ -1073,6 +1223,8 @@
 "date": "2026-11-09",
 "ts": 1794245370,
 "note": "The Gap Holiday Kickoff Event takes 40% to 60% off select pajamas, accessories, and more. Plus, promo code takes an additional 20% off select items. Some exclusions apply. A dedicated Gift Shop on the site collects festi",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 60
 },
@@ -1093,6 +1245,8 @@
 "date": "2026-11-09",
 "ts": 1794232403,
 "note": "This TCL 65QM8L 65\" Mini LED TV is 60% off at Amazon. It's the best deal we've seen for this model. The panel offers 4000+ dimming zones, up to 6,000 peak nits of brightness, and a 144Hz refresh rate for gaming. Shipping",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 60
 },
@@ -1113,6 +1267,8 @@
 "date": "2026-11-07",
 "ts": 1794054521,
 "note": "eBay's Best of Tech event is heavy on storage, with Seagate IronWolf, SkyHawk, BarraCuda, and Exos hard drives running from a 4TB SkyHawk at $160 up to a 30TB Exos M models at $1,400. The SanDisk 8TB USB-C desk drive SSD",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 60
 },
@@ -1133,6 +1289,8 @@
 "date": "2026-11-04",
 "ts": 1793795342,
 "note": "This ACTIVE mold stain remover gel is $11 for a first-time Sub & Save order when you also use coupon code \"K9BRSTAP\". .That's $11 off and the best price we could find. The 7-oz. bottle is made for front-load washer seals",
+"how": [],
+"code": "K9BRSTAP",
 "tier": "best",
 "score": 60
 },
@@ -1153,6 +1311,10 @@
 "date": "2026-11-09",
 "ts": 1794255253,
 "note": "With promo code \"COZY\", this adidas Originals France jersey drops to $38, down from $90. The design references Marseille's past as a World Cup host city. adidas adiClub members get free shipping on all orders (it's free ",
+"how": [
+"Free rewards account"
+],
+"code": "COZY",
 "tier": "best",
 "score": 58
 },
@@ -1173,6 +1335,10 @@
 "date": "2026-11-09",
 "ts": 1794252509,
 "note": "With promo code \"COZY\", adidas drops the Coca-Cola Samba OG shoes to $55, down from $130, and $75 less than other stores charge. This collaboration launched in June 2026 at $130, so it is a recent release. adidas adiClub",
+"how": [
+"Free rewards account"
+],
+"code": "COZY",
 "tier": "best",
 "score": 58
 },
@@ -1193,6 +1359,8 @@
 "date": "2026-11-09",
 "ts": 1794250879,
 "note": "lululemon's We Made Too Much Event takes up to 58% off men's joggers and pants. The ABC Warpstreme Jogger in Silver Drop is 58% off. The Zeroed In Classic-Fit Cargo Jogger is 54% off, and the pictured Steady State SuperL",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 58
 },
@@ -1213,6 +1381,10 @@
 "date": "2026-11-09",
 "ts": 1794254677,
 "note": "With promo code \"COZY\", this adidas Pet Jersey Nation Pack comes to $15, down from $35. It's also available in the Argentina option size XS only at the same price. The jersey launched in May 2026 at $35 as part of the FI",
+"how": [
+"Free rewards account"
+],
+"code": "COZY",
 "tier": "best",
 "score": 57
 },
@@ -1233,6 +1405,8 @@
 "date": "2026-11-09",
 "ts": 1794240120,
 "note": "Works well under backless or strapless outfits when you need lift without visible straps, and at $10 it's $13 off the $23 list price. Apply coupon code \"MV7N9C28\" to save. Deal ends December 7. Buy Now at Amazon . Featur",
+"how": [],
+"code": "MV7N9C28",
 "tier": "best",
 "score": 57
 },
@@ -1253,6 +1427,10 @@
 "date": "2026-11-09",
 "ts": 1794258080,
 "note": "Macy's Black Friday home deals includes comforters for $22, cookware from $13, up to 65% off luggage, markdowns on furniture, mattresses, and rugs. Star Rewards members receive free shipping on orders over $39 (it's free",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 56
 },
@@ -1264,8 +1442,8 @@
 "cat": "Home & Household",
 "tag": "",
 "store": "Zoma",
-"price": 419.0,
-"was": 599.0,
+"price": 630.0,
+"was": 1260.0,
 "pct": 50,
 "low": false,
 "hot": false,
@@ -1273,6 +1451,8 @@
 "date": "2026-11-09",
 "ts": 1794256821,
 "note": "With promo code \"BFCM26\", Zoma's Black Friday Sale takes up to $630 off any mattress. The Zoma Start Hybrid starts at $419, down from $599, and adjustable bed bundles save up to $1,840 with no code needed. Sports pillows",
+"how": [],
+"code": "BFCM26",
 "tier": "best",
 "score": 55
 },
@@ -1293,6 +1473,8 @@
 "date": "2026-11-09",
 "ts": 1794256686,
 "note": "Amerisleep takes up to $1,000 off mattresses, with prices starting at $699 for the AS2 and reaching $2,399 for the AS6 Black Series. Bed frames are 40% off and pillows are 20% off, so a full bed setup can be priced in on",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 55
 },
@@ -1313,6 +1495,30 @@
 "date": "2026-11-09",
 "ts": 1794250367,
 "note": "This Ryobi 40V trimmer and blower combo kit is $179 off at Home Depot. That's $50 off. The kit includes a battery and charger. Shipping is free. Buy Now at Home Depot . Features Includes a 12\" cordless string trimmer and",
+"how": [],
+"code": "",
+"tier": "best",
+"score": 55
+},
+{
+"id": "22370627",
+"t": "Waterdrop Veterans Day Sale Water Filter Deals at Waterdrop: Up to $500 off + shipping varies",
+"url": "https://www.dealnews.com/Waterdrop-Veterans-Day-Sale-Water-Filter-Deals-at-Waterdrop-Up-to-500-off-shipping-varies/22370627.html?iref=rss-c196",
+"img": "https://d.dlnws.com/64599/1794248106-whf21-sh.jpg?h=250&w=200",
+"cat": "Home & Household",
+"tag": "",
+"store": "Waterdrop",
+"price": 500.0,
+"was": 1000.0,
+"pct": 50,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794248113,
+"note": "Waterdrop is running its Veterans Day sale with up to $500 off reverse osmosis water filter systems. The X16 under sink system drops to $1,499, down from $1,999, while the countertop M6SL mineral system is $249, down fro",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 55
 },
@@ -1333,6 +1539,10 @@
 "date": "2026-11-09",
 "ts": 1794239368,
 "note": "With Veterans Day approaching, Samsung's Military Offer Program gives verified military members extra savings across phones, TVs, monitors, appliances, and wearables. The Galaxy Watch Ultra2 is 15% off plus a $150 Samsun",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 55
 },
@@ -1343,7 +1553,7 @@
 "img": "https://d.dlnws.com/64599/1794219481-product-trimmed.jpg?h=123&w=158",
 "cat": "Tech",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 150.0,
 "was": 300.0,
 "pct": 50,
@@ -1353,6 +1563,10 @@
 "date": "2026-11-09",
 "ts": 1794219486,
 "note": "Woot is running an MSI monitors sale, with factory reconditioned models ranging from a 24\" MSI PRO MP243L gaming monitor at $79 up to a 32\" MPG 322URX QD-OLED at $742. Samsung, KTC, and ONN monitors are in the mix too, i",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 55
 },
@@ -1373,6 +1587,8 @@
 "date": "2026-11-09",
 "ts": 1794216728,
 "note": "Built for ultrawide and curved monitors that standard arms can't handle, it frees up desk space by getting the display off its stand entirely. It's $48 off the list price right now via the checkout discount. Deal ends No",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 55
 },
@@ -1393,6 +1609,8 @@
 "date": "2026-11-06",
 "ts": 1793978338,
 "note": "Turning one laptop screen into two makes a real difference for anyone juggling spreadsheets, video calls, and reference docs at the same time, and this 14\" extender setup is currently $99 off the $179 list price, more th",
+"how": [],
+"code": "F7TPSVDC",
 "tier": "best",
 "score": 55
 },
@@ -1413,6 +1631,8 @@
 "date": "2026-11-04",
 "ts": 1793795619,
 "note": "These ACTIVE garbage disposal cleaner tablets are $16 for a first-time Sub & Save order when you also use coupon code \"K9BRSTAP\". .That's $13 off and the best price we could find. Each tablet is meant to be used once or ",
+"how": [],
+"code": "K9BRSTAP",
 "tier": "best",
 "score": 55
 },
@@ -1433,6 +1653,8 @@
 "date": "2026-11-09",
 "ts": 1794248967,
 "note": "At lululemon, women's leggings in the We Made Too Much event are up to 67% off, with prices starting at $49. Align pants are made from Nulu fabric, an 81% nylon and 19% elastane blend that is lightweight and soft but not",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 53
 },
@@ -1443,7 +1665,7 @@
 "img": "https://d.dlnws.com/64599/1794242695-s-l1600.webp?h=250&w=250",
 "cat": "Tech",
 "tag": "",
-"store": "",
+"store": "Anker Outlet",
 "price": null,
 "was": null,
 "pct": 48,
@@ -1453,6 +1675,8 @@
 "date": "2026-11-09",
 "ts": 1794242701,
 "note": "Here you'll find a large selection of Anker items, discounted up to 60% off. Even better, you can use promo code \"SHOPBRANDS20\" to get an extra 20% off. Shipping is free. Some exclusions may apply. Deal ends November 15.",
+"how": [],
+"code": "SHOPBRANDS20",
 "tier": "average",
 "score": 53
 },
@@ -1463,7 +1687,7 @@
 "img": "https://d.dlnws.com/64599/1794242030-product-trimmed.jpg?h=250&w=85",
 "cat": "Fashion",
 "tag": "",
-"store": "",
+"store": "Carhartt Men's",
 "price": null,
 "was": null,
 "pct": 48,
@@ -1473,6 +1697,32 @@
 "date": "2026-11-09",
 "ts": 1794242035,
 "note": "Here you'll find a selection of Carhartt men's items, discounted up to 60% off. Even better, use promo code \"SHOPBRANDS20\" to get an extra 20% off. Shipping is free. Deal ends November 15. Shop Now at eBay .",
+"how": [],
+"code": "SHOPBRANDS20",
+"tier": "average",
+"score": 53
+},
+{
+"id": "22369974",
+"t": "Home Depot Black Friday Ranges Sale: Up to 40% off + bundle offers + free delivery w/ $398",
+"url": "https://www.dealnews.com/Home-Depot-Black-Friday-Ranges-Sale-Up-to-40-off-bundle-offers-free-delivery-w-398/22369974.html?iref=rss-c196",
+"img": "https://d.dlnws.com/64599/1794213454-stainless-steel-lg-double-oven-electric-ranges-ldel7324ye-64_1000.avif?h=250&w=250",
+"cat": "Home & Household",
+"tag": "",
+"store": "Home Depot",
+"price": 398.0,
+"was": 698.0,
+"pct": 43,
+"low": false,
+"hot": true,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794213460,
+"note": "During Home Depot's Black Friday Sale you can save up to 40% off ovens and stovetops from brands such as Frigidaire, Samsung, and GE. Prices include a Frigidaire 30\" 5-burner gas range at $749, down from $979, and a Whir",
+"how": [
+"Delivery"
+],
+"code": "",
 "tier": "average",
 "score": 53
 },
@@ -1513,6 +1763,10 @@
 "date": "2026-11-04",
 "ts": 1793797397,
 "note": "This ACTIVE pet stain and odor remover is $16 for a first-time Sub & Save order when you also use coupon code \"K9BRSTAP\". That's $12 off and the best price we could find. The 32-oz. spray is made for carpet, upholstery, ",
+"how": [
+"Free rewards account"
+],
+"code": "K9BRSTAP",
 "tier": "best",
 "score": 53
 },
@@ -1533,6 +1787,10 @@
 "date": "2026-11-09",
 "ts": 1794257604,
 "note": "Setting one of these up makes sense for small businesses that want self-serve ordering, check-in, or wayfinding without hiring a developer to build it from scratch, since the touchscreen and Android OS handle most of the",
+"how": [
+"In the app"
+],
+"code": "SDTOPTNZ",
 "tier": "average",
 "score": 50
 },
@@ -1553,6 +1811,10 @@
 "date": "2026-11-09",
 "ts": 1794252938,
 "note": "This allen + roth Wallister vanity is $1,085 off at Lowe's, and the deal is listed as ending today, November 9. The marble top is pre-drilled for a widespread faucet and the sink is included. MyLowe's Rewards members get",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 50
 },
@@ -1573,6 +1835,8 @@
 "date": "2026-11-09",
 "ts": 1794240300,
 "note": "Clearing brush, killing weeds along fence lines, or lighting charcoal fast are all jobs this handles well, and the 14-foot hose gives you room to move without dragging a propane tank behind you. It's $25 off the $50 list",
+"how": [],
+"code": "4ESYXQZR",
 "tier": "best",
 "score": 50
 },
@@ -1593,6 +1857,10 @@
 "date": "2026-11-09",
 "ts": 1794232628,
 "note": "This 1x4 4K HDMI Splitter is 50% off at Amazon, dropping to $8. It's the best price Amazon has charged for this model. It mirrors one HDMI source to four displays at once and includes the USB-C power cable. It does not e",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 50
 },
@@ -1613,6 +1881,8 @@
 "date": "2026-11-09",
 "ts": 1794226406,
 "note": "This Pegasus Sports NFL mascot plushie pillow is $20 at QVC, with $5.50 shipping and handling added. It is available in nine NFL team mascot options, including the Cardinals, Chargers, Falcons, Giants, Jets, Raiders, Ram",
+"how": [],
+"code": "HOLIDAY20",
 "tier": "best",
 "score": 50
 },
@@ -1633,13 +1903,17 @@
 "date": "2026-11-08",
 "ts": 1794141840,
 "note": "Leatherman's Deep Cuts sale covers multi-tools, knives, and accessories, with several items marked 50% off. The FREE K4X multi-tool with 9 tools is $100, and the FREE K2X with 8 tools is $90. A Bit Driver Extender is $30",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 50
 },
 {
 "id": "22360251",
 "t": "Waiakea 1L Hawaiian Volcanic Water 12-Pack for $9.89 w/ Sub & Save + free shipping w/ Prime",
-"url": "https://www.dealnews.com/Waiakea-1-L-Hawaiian-Volcanic-Water-12-Pack-for-9-89-w-Sub-Save-free-shipping-w-Prime/22360251.html?iref=rss-c213",
+"url": "https://www.dealnews.com/Waiakea-1-L-Hawaiian-Volcanic-Water-12-Pack-for-9-89-w-Sub-Save-free-shipping-w-Prime/22360251.html?iref=rss-c377",
 "img": "https://d.dlnws.com/64599/1794046346-71tnthww08l.jpg?h=250&w=239",
 "cat": "Food & Grocery",
 "tag": "",
@@ -1653,6 +1927,34 @@
 "date": "2026-11-07",
 "ts": 1794046352,
 "note": "Amazon has this 12-pack of Waiakea water for just $9.89 when you do the following: clip the 40% off coupon and check out with Subscribe & Save. That knocks this pack of 1-liter bottles to an all-time low. Shipping is fre",
+"how": [
+"Free rewards account"
+],
+"code": "",
+"tier": "best",
+"score": 50
+},
+{
+"id": "22355490",
+"t": "Habit Burger Original Habit Grill Charburger: Buy one get one free",
+"url": "https://www.dealnews.com/Habit-Burger-Original-Habit-Grill-Charburger-Buy-one-get-one-free/22355490.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1793963474-product-trimmed.jpg?h=164&w=250",
+"cat": "Home & Household",
+"tag": "",
+"store": "The Habit Burger",
+"price": null,
+"was": null,
+"pct": 50,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-06",
+"ts": 1793963479,
+"note": "Habit Burger Rewards members can avail of a \"buy one get one free\" offer on Original Habit Grill Charburgers (with or without cheese). Not a member? It's free to join. Offer ends November 9. Shop Now at The Habit Burger ",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "best",
 "score": 50
 },
@@ -1673,6 +1975,8 @@
 "date": "2026-11-06",
 "ts": 1793954986,
 "note": "Fanatics has just dropped its Holiday Head Start promo code, \"MERRY\", which drops prices on nearly everything across its store. The coupon takes between 25% and 50% off most items, including in-season NFL, MLB, NBA, and ",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 50
 },
@@ -1693,6 +1997,32 @@
 "date": "2026-11-06",
 "ts": 1793941260,
 "note": "Lensmart reduces prices on its glasses from $29.95 to as low as $6.95. Plus, get an extra 20% off all orders with coupon code \"DNVIP\" at checkout as well as 50% off every second frame you buy. Shipping adds $5.90, but or",
+"how": [],
+"code": "DNVIP",
+"tier": "best",
+"score": 50
+},
+{
+"id": "22350948",
+"t": "Any Pizza at Papa Murphy's: 50% off",
+"url": "https://www.dealnews.com/Any-Pizza-at-Papa-Murphys-50-off/22350948.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1793885277-product-trimmed.jpg?h=211&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "Papa Murphy's",
+"price": null,
+"was": null,
+"pct": 50,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-05",
+"ts": 1793885284,
+"note": "Papa Murphy's is taking 50% off menu-priced Take 'N' Bake pizzas with promo code \"50PIZZA\" online. The discount covers Specialty, Stuffed, Crustless, and Create Your Own pizzas, with up to five per order. Deal ends Novem",
+"how": [
+"Online"
+],
+"code": "50PIZZA",
 "tier": "best",
 "score": 50
 },
@@ -1713,6 +2043,8 @@
 "date": "2026-11-05",
 "ts": 1793874242,
 "note": "Ultra Mobile's 12-month 4GB plan is 50% off for new customers, dropping to $6.50 per month. That adds up to $78 saved over the year compared with the regular $13 monthly rate. New customers pay $78 upfront for the full 1",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 50
 },
@@ -1733,13 +2065,15 @@
 "date": "2026-11-05",
 "ts": 1793868358,
 "note": "Amazon takes 50% off this 48-pack of Vitamin Energy Fruit Punch shots when you clip the coupon and select Subscribe & Save. That brings the price to about $30, or under $1 per bottle. Buy Now at Amazon .",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 50
 },
 {
 "id": "22346558",
 "t": "Uber Eats November 2026 Promo Code for $10 off $20+ first order",
-"url": "https://www.dealnews.com/Uber-Eats-November-2026-Promo-Code-for-10-off-20-first-order/22346558.html?iref=rss-c213",
+"url": "https://www.dealnews.com/Uber-Eats-November-2026-Promo-Code-for-10-off-20-first-order/22346558.html?iref=rss-c377",
 "img": "https://d.dlnws.com/64599/1709308838-dn-image-7814522.png?h=250&w=250",
 "cat": "Food & Grocery",
 "tag": "",
@@ -1753,6 +2087,12 @@
 "date": "2026-11-04",
 "ts": 1793803211,
 "note": "New Uber Eats customers can apply the promo code \"affeats11us1126\" to save $10 on your first order of $20 or more throughout November 2026. Note that some exclusions may apply and this coupon has a limited number of 9,00",
+"how": [
+"In the app",
+"Free rewards account",
+"Online"
+],
+"code": "",
 "tier": "best",
 "score": 50
 },
@@ -1773,6 +2113,8 @@
 "date": "2026-11-03",
 "ts": 1793747371,
 "note": "This Sindcom cereal storage container set of four is $17 at Walmart, down from $34. Spend $35 for free shipping. Otherwise, shipping adds $6.99. Buy Now at Walmart . Features Set of 4 containers, 135.2 fl oz (4L) each . ",
+"how": [],
+"code": "",
 "tier": "best",
 "score": 50
 },
@@ -1813,6 +2155,8 @@
 "date": "2026-11-09",
 "ts": 1794226146,
 "note": "At Amazon, clip the on-page coupon and check out with Subscribe & Save to get this Scott ComfortPlus Toilet Paper Triple Roll 36-Pack for $11. It's the best price we could find by $7. Each triple roll holds 231 sheets, f",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 49
 },
@@ -1833,6 +2177,10 @@
 "date": "2026-11-03",
 "ts": 1793703850,
 "note": "This cordless scrubber handles tile grout, tubs, and baked-on kitchen grime without the wrist strain of scrubbing by hand, which matters most if you deal with bathroom mildew or stubborn stovetop messes regularly. At $35",
+"how": [
+"Free rewards account"
+],
+"code": "RZZU6AKX",
 "tier": "average",
 "score": 49
 },
@@ -1853,6 +2201,10 @@
 "date": "2026-11-09",
 "ts": 1794242963,
 "note": "The Alo Yoga Singles Day Event takes 30% off sitewide at Alo, covering women's and men's clothing, shoes, and accessories. The discount requires being signed in to an Alo Access membership account (it's free to sign up).",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 48
 },
@@ -1863,7 +2215,7 @@
 "img": "https://d.dlnws.com/64599/1794241819-product-trimmed.jpg?h=250&w=237",
 "cat": "Fashion",
 "tag": "",
-"store": "",
+"store": "Samsonite Outlet",
 "price": null,
 "was": null,
 "pct": 48,
@@ -1873,6 +2225,30 @@
 "date": "2026-11-09",
 "ts": 1794241826,
 "note": "Here you'll find a selection of Samsonite luggage, discounted by up to 60% off. Even better, use promo code \"SHOPBRANDS20\" to get an extra 20% off. Shipping is free. Deal ends November 15. Shop Now at eBay .",
+"how": [],
+"code": "SHOPBRANDS20",
+"tier": "average",
+"score": 48
+},
+{
+"id": "22370400",
+"t": "Wayfair 72-Hour Clearout Sale: Up to 60% off + free shipping w/ $35",
+"url": "https://www.dealnews.com/Wayfair-72-Hour-Clearout-Sale-Up-to-60-off-free-shipping-w-35/22370400.html?iref=rss-c196",
+"img": "https://d.dlnws.com/64599/1778176899-wayfair-2024-logo.png?h=58&w=250",
+"cat": "Home & Household",
+"tag": "",
+"store": "Wayfair",
+"price": 35.0,
+"was": null,
+"pct": 48,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794237670,
+"note": "Wayfair's 72-Hour Clearout puts rugs, beds, accent cabinets, bedding, and decor on sale, with the steepest markdowns on rugs and bedroom furniture. The Mendota indoor/outdoor area rug is $85, down from $280, and the Stau",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 48
 },
@@ -1883,7 +2259,7 @@
 "img": "https://d.dlnws.com/64599/1794219009-product-trimmed.jpg?h=250&w=250",
 "cat": "Home & Household",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 87.0,
 "was": 140.0,
 "pct": 43,
@@ -1893,6 +2269,8 @@
 "date": "2026-11-09",
 "ts": 1794219015,
 "note": "Woot's Haul of Fame sale covers office and home furniture, with standing desks, office chairs, bean bags, side tables, bookshelves, and bed frames in the mix. Prices start at $13 for a 3-tier oval end table, and a Veken ",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 48
 },
@@ -1913,6 +2291,10 @@
 "date": "2026-11-09",
 "ts": 1794218603,
 "note": "At Amazon, check out with Subscribe & Save to get this Melitta #4 Unbleached Cone Coffee Filters 100-Count 6-Pack for $15. It's the best price we could find by $9. Shipping is free for Prime members. Buy Now at Amazon . ",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 48
 },
@@ -1933,6 +2315,10 @@
 "date": "2026-11-09",
 "ts": 1794218324,
 "note": "At Amazon, clip the on-page coupon and check out with Subscribe & Save to get this Windex Original Glass & Window Cleaner 67.6-oz. Refill for $4.88. It's the best price we could find by $3. Shipping is free for Prime mem",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 48
 },
@@ -1943,7 +2329,7 @@
 "img": "https://d.dlnws.com/64599/1793959883-product-trimmed.jpg?h=159&w=250",
 "cat": "Fashion",
 "tag": "",
-"store": "adidas",
+"store": "",
 "price": null,
 "was": null,
 "pct": 48,
@@ -1953,6 +2339,10 @@
 "date": "2026-11-06",
 "ts": 1793959933,
 "note": "adidas has just dropped a new promo code, \"COZY\", that takes an extra 30% off full-price and sale items, which are already discounted by up to 60%. It yields some of the best prices we've seen on running shoes, Terrex hi",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 48
 },
@@ -1973,6 +2363,8 @@
 "date": "2026-11-09",
 "ts": 1794250357,
 "note": "With promo code \"NEWS10SLJ\", the 32 Degrees Men's Hooded Sherpa-Lined Jacket drops to $20, down from $30. Plus, stack coupon code \"NEWS24\" and you'll get free shipping on orders of $23.75 or more. Coupon ends November 11",
+"how": [],
+"code": "NEWS10SLJ",
 "tier": "average",
 "score": 46
 },
@@ -1983,7 +2375,7 @@
 "img": "https://d.dlnws.com/64599/1794231174-s-l960.webp?h=250&w=250",
 "cat": "Tech",
 "tag": "",
-"store": "",
+"store": "EcoFlow Portable",
 "price": null,
 "was": null,
 "pct": 46,
@@ -1993,6 +2385,8 @@
 "date": "2026-11-09",
 "ts": 1794231180,
 "note": "Use promo code \"SHOPBRANDS20\" at eBay on select EcoFlow power stations, solar panels, and generators, in new, certified refurbished, and open-box condition. The $500 cap means the full discount applies on purchases up to",
+"how": [],
+"code": "SHOPBRANDS20",
 "tier": "average",
 "score": 46
 },
@@ -2013,15 +2407,17 @@
 "date": "2026-11-04",
 "ts": 1793781284,
 "note": "Tackling grout, tubs, and tile becomes less of a chore with this cordless scrubber, especially for anyone dealing with built-up bathroom or kitchen grime, and the 15 included attachments cover most household surfaces. It",
+"how": [],
+"code": "XJ349YC0",
 "tier": "average",
 "score": 46
 },
 {
 "id": "22370847",
 "t": "Vevor Black Friday Pre-Sale: Up to 50% off + Coupons + free shipping",
-"url": "https://www.dealnews.com/Vevor-Black-Friday-Pre-Sale-Up-to-50-off-Coupons-free-shipping/22370847.html?iref=rss",
+"url": "https://www.dealnews.com/Vevor-Black-Friday-Pre-Sale-Up-to-50-off-Coupons-free-shipping/22370847.html?iref=rss-c196",
 "img": "https://d.dlnws.com/64599/1794257438-us_2fs35cuft21inchnvk3v0_2fgoods_thumb_220-v14_2flawn-sweeper-m100-1-2.jpg?h=220&w=220",
-"cat": "Other",
+"cat": "Home & Household",
 "tag": "",
 "store": "VEVOR",
 "price": 1488.0,
@@ -2033,6 +2429,32 @@
 "date": "2026-11-09",
 "ts": 1794257445,
 "note": "VEVOR's Black Friday Sale spans garage and yard gear, led by a 62 cc gas chainsaw with a 20\" bar at $116 and a 7,000-lb portable car lift at $1,488, down from $1,600. Tiered coupons take $20 off orders over $259, $30 off",
+"how": [
+"Free rewards account"
+],
+"code": "",
+"tier": "average",
+"score": 45
+},
+{
+"id": "22369979",
+"t": "Free Country Freedom Sale: 40% off + free shipping w/ $99",
+"url": "https://www.dealnews.com/Free-Country-Freedom-Sale-40-off-free-shipping-w-99/22369979.html?iref=rss-c202",
+"img": "https://d.dlnws.com/64599/1794214039-product-trimmed.png?h=250&w=250",
+"cat": "Fashion",
+"tag": "",
+"store": "Free Country",
+"price": 99.0,
+"was": null,
+"pct": 40,
+"low": false,
+"hot": true,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794214045,
+"note": "Free Country's Freedom Sale takes 40% off with promo code \"FREEDOM\". The Fall Edit covers women's and men's jackets & vests, including fleece, sherpa, quilted, faux-suede, and barn-style jackets, plus flannel shirts and ",
+"how": [],
+"code": "FREEDOM",
 "tier": "average",
 "score": 45
 },
@@ -2053,6 +2475,8 @@
 "date": "2026-11-09",
 "ts": 1794213238,
 "note": "Groupon's Early Black Friday event runs November 9 to 22, 2026, with promo code \"RELAX\" taking up to 55% off select spa and massage deals. Shop Now at Groupon .",
+"how": [],
+"code": "RELAX",
 "tier": "average",
 "score": 44
 },
@@ -2063,7 +2487,7 @@
 "img": "https://d.dlnws.com/64599/1793954051-product-trimmed.jpg?h=201&w=250",
 "cat": "Food & Grocery",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": null,
 "was": null,
 "pct": 44,
@@ -2073,6 +2497,10 @@
 "date": "2026-11-06",
 "ts": 1793954056,
 "note": "Woot's Holiday Hosting sale is stocked with food, drink, and entertaining items for holiday gatherings, from a Knipschildt 25-piece chocolate collection at $44 to a 24-pack of Milaf Date Cola at $50. It also includes bar",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 44
 },
@@ -2093,6 +2521,8 @@
 "date": "2026-11-09",
 "ts": 1794250783,
 "note": "Promo code \"NOVEMBER\" takes up to an extra 25% off select shoes and up to 30% off select clothing and accessories through November 11. Plus, New Balance is offering free shipping on all orders through December 31. Shop N",
+"how": [],
+"code": "NOVEMBER",
 "tier": "average",
 "score": 43
 },
@@ -2103,7 +2533,7 @@
 "img": "https://d.dlnws.com/64599/1794220195-product-trimmed.jpg?h=152&w=129",
 "cat": "Food & Grocery",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": null,
 "was": null,
 "pct": 43,
@@ -2113,6 +2543,10 @@
 "date": "2026-11-09",
 "ts": 1794220202,
 "note": "Woot's Thirst Things First sale covers coffee, tea, protein shakes, electrolyte mixes, and bottled drinks. YEGE Mushroom Coffee (30 servings) is $13, while the Starbucks by Nespresso Espresso 100-count is $70. Protein op",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 43
 },
@@ -2133,6 +2567,8 @@
 "date": "2026-11-04",
 "ts": 1793828610,
 "note": "With promo code \"DNJRHCSF5\", this Jolly Rancher Zero Sugar hard candy bulk bag is $34 off at Candy In Bulk. Isomalt and polyglycitol syrup replace the sugar, and the candy is aspartame free. Both sweeteners are sugar alc",
+"how": [],
+"code": "DNJRHCSF5",
 "tier": "average",
 "score": 43
 },
@@ -2153,6 +2589,8 @@
 "date": "2026-11-05",
 "ts": 1793869924,
 "note": "Nonni's XL Cioccolati biscotti are $10 off at Amazon, and the price is well below its 90-day average of $26. Each box holds 25 individually wrapped, extra-long biscotti. Shipping is free. Buy Now at Amazon .",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 42
 },
@@ -2173,6 +2611,8 @@
 "date": "2026-11-09",
 "ts": 1794248864,
 "note": "Give your baby a convenient place to sleep, play, and get changed, with a portable 4-in-1 design that folds for travel or storage. Walmart currently has this listed for $100, which is $70 off the $170 list price via the ",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 41
 },
@@ -2193,6 +2633,8 @@
 "date": "2026-11-09",
 "ts": 1794257205,
 "note": "Vaya mattresses are $300 off with promo code \"BFCM300\" during the Black Friday Mattress Sale. Vaya pillows are 15% off when you buy two, Vaya platform beds are 15% off with promo code \"BFCM15\", and adjustable bed bundles",
+"how": [],
+"code": "BFCM300",
 "tier": "average",
 "score": 40
 },
@@ -2213,6 +2655,8 @@
 "date": "2026-11-09",
 "ts": 1794256223,
 "note": "Under Armour takes an extra 40% off sale items with promo code \"WARMUP\", and promo code \"EXTRA\" adds an extra 10% off on top of that to drop these Under Armour Knit Warm Up Team pants to $23. That's $14 less than Amazon ",
+"how": [],
+"code": "WARMUP",
 "tier": "average",
 "score": 40
 },
@@ -2233,6 +2677,10 @@
 "date": "2026-11-09",
 "ts": 1794253993,
 "note": "adidas is taking up to 50% off hats during its Early Holiday Sale, plus an extra 30% off with promo code \"COZY\". We've pictured the Canvas 5-Panel Cap for $11 after the coupon code ($9 off). adidas adiClub members get fr",
+"how": [
+"Free rewards account"
+],
+"code": "COZY",
 "tier": "average",
 "score": 40
 },
@@ -2253,6 +2701,8 @@
 "date": "2026-11-09",
 "ts": 1794248299,
 "note": "During the Blinds.com Veterans Day Sale, use promo code \"THANKYOU\" to get up to 45% off sitewide through November 11. Next Level Doorbusters run up to 50% off over the same dates. Sale pages list mini blinds, faux wood b",
+"how": [],
+"code": "THANKYOU",
 "tier": "average",
 "score": 40
 },
@@ -2273,6 +2723,10 @@
 "date": "2026-11-09",
 "ts": 1794228351,
 "note": "Macy's Parade of Deals features De'Longhi and Nespresso coffee and espresso makers, with several listings marked as part of the Parade of Deals, including the De'Longhi ECP3420 manual espresso machine and the Nespresso V",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 40
 },
@@ -2293,6 +2747,10 @@
 "date": "2026-11-09",
 "ts": 1794227444,
 "note": "This Astercook 22-piece knife set is $20 off at Amazon, bringing it to $30 from a regular price of $50. It's the best deal Amazon has offered for this set. The set includes a clear block and a sharpener, with dishwasher-",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 40
 },
@@ -2313,6 +2771,10 @@
 "date": "2026-11-07",
 "ts": 1794063694,
 "note": "Clip the 40% off coupon and check out with Subscribe & Save to get this18-pack of Quilted Northern Ultra Mega Rolls of toilet paper for just $10.94. That's nearly half its normal price. Each mega roll is equal to four re",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 40
 },
@@ -2323,7 +2785,7 @@
 "img": "https://d.dlnws.com/64599/1793954302-product-trimmed.jpg?h=250&w=250",
 "cat": "Tech",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": 115.0,
 "was": 150.0,
 "pct": 40,
@@ -2333,6 +2795,32 @@
 "date": "2026-11-06",
 "ts": 1793954307,
 "note": "A selection of licensed software has hit the Woot clearance section today, including Microsoft, security, and creative software discounted by up to 50%. The sale includes Microsoft Office Home 2024 at $115, down from $15",
+"how": [
+"Free rewards account"
+],
+"code": "",
+"tier": "average",
+"score": 40
+},
+{
+"id": "22350721",
+"t": "Walmart Holiday Rollback Deals on Toys: Up to 50% off + free shipping w/ $35",
+"url": "https://www.dealnews.com/Walmart-Holiday-Rollback-Deals-on-Toys-Up-to-50-off-free-shipping-w-35/22350721.html?iref=rss-c186",
+"img": "https://d.dlnws.com/64599/1793873827-product-trimmed.jpg?h=214&w=250",
+"cat": "Toys & Gaming",
+"tag": "",
+"store": "Walmart",
+"price": 35.0,
+"was": null,
+"pct": 40,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-05",
+"ts": 1793873834,
+"note": "Walmart is offering Rollback prices on toys and games across building sets, dolls, action figures, plush, and card games, all in time for the holidays. Prices start at $3, with a Honey Bee Acres collectible mystery bag a",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 40
 },
@@ -2353,6 +2841,10 @@
 "date": "2026-11-09",
 "ts": 1794251540,
 "note": "Stationary bikes like this suit anyone wanting low-impact cardio at home without committing to a treadmill-sized footprint, and the current price saves you $75 off the $190 list. Apply coupon code \"2VR3EBX0\" to get the d",
+"how": [
+"In the app"
+],
+"code": "2VR3EBX0",
 "tier": "average",
 "score": 39
 },
@@ -2373,6 +2865,8 @@
 "date": "2026-11-09",
 "ts": 1794242737,
 "note": "At Walmart, this Dyson V8 Cyclone cordless vacuum is $150 off. The bundle adds a three-tool car cleaning kit to the five standard Dyson accessories. Shipping is free on this order, too. Buy Now at Walmart .",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 38
 },
@@ -2393,6 +2887,8 @@
 "date": "2026-11-09",
 "ts": 1794242297,
 "note": "Amazon has the Philips Hue Smart LED A19 Warm White 4-Pack at 24% off. Shipping is free. Buy Now at Amazon . Features Pack of 4 A19 bulbs w/ E26 base . 9W LED, equal to 60W incandescent . 810 lumens of 2700K warm white l",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 37
 },
@@ -2403,7 +2899,7 @@
 "img": "https://d.dlnws.com/64599/1794241636-product-trimmed.jpg?h=250&w=203",
 "cat": "Tech",
 "tag": "",
-"store": "",
+"store": "Bose Outlet",
 "price": null,
 "was": null,
 "pct": 32,
@@ -2413,26 +2909,8 @@
 "date": "2026-11-09",
 "ts": 1794241643,
 "note": "Here you'll find a selection of certified refurb Bose audio deals. Even better, use promo code \"SHOPBRANDS20\" to get an extra 20% off. Each refurb includes a 2-year Allstate warranty. This deal ends November 15. Shop Now",
-"tier": "average",
-"score": 37
-},
-{
-"id": "22369974",
-"t": "Home Depot Black Friday Ranges Sale: Up to 40% off + bundle offers + free delivery w/ $398",
-"url": "https://www.dealnews.com/Home-Depot-Black-Friday-Ranges-Sale-Up-to-40-off-bundle-offers-free-delivery-w-398/22369974.html?iref=rss-c196",
-"img": "https://d.dlnws.com/64599/1794213454-stainless-steel-lg-double-oven-electric-ranges-ldel7324ye-64_1000.avif?h=250&w=250",
-"cat": "Home & Household",
-"tag": "",
-"store": "Home Depot",
-"price": 749.0,
-"was": 979.0,
-"pct": 32,
-"low": false,
-"hot": false,
-"staff": false,
-"date": "2026-11-09",
-"ts": 1794213460,
-"note": "During Home Depot's Black Friday Sale you can save up to 40% off ovens and stovetops from brands such as Frigidaire, Samsung, and GE. Prices include a Frigidaire 30\" 5-burner gas range at $749, down from $979, and a Whir",
+"how": [],
+"code": "SHOPBRANDS20",
 "tier": "average",
 "score": 37
 },
@@ -2443,7 +2921,7 @@
 "img": "https://d.dlnws.com/64599/1793905259-s-l1600.webp?h=250&w=250",
 "cat": "Fashion",
 "tag": "",
-"store": "",
+"store": "Levi's Men's",
 "price": 16.0,
 "was": 21.0,
 "pct": 24,
@@ -2453,6 +2931,10 @@
 "date": "2026-11-08",
 "ts": 1794140460,
 "note": "Target's outlet, Bullseye Deals on eBay, has Levi's men's jeans priced from $16 to $29 per pair, and an extra $5 off every $40 spent applies in cart. We've pictured the Levi's Men's 506 Comfort Fit Straight Jeans for $19",
+"how": [
+"Delivery"
+],
+"code": "",
 "tier": "average",
 "score": 37
 },
@@ -2473,6 +2955,8 @@
 "date": "2026-11-09",
 "ts": 1794240947,
 "note": "This Magna-Tiles microMAGS Advent Calendar is $10 off with the on-page coupon, bringing the price to $29. That is below its 90-day Amazon average of $40 and its all-time low of $39. Shipping is free. Buy Now at Amazon .",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 36
 },
@@ -2493,6 +2977,8 @@
 "date": "2026-11-09",
 "ts": 1794251336,
 "note": "Keep multiple dishes warm for family dinners, holiday gatherings, or buffets with three independently controlled heating panels that free up oven space. It's $35 off the $100 list price, now $65, via the checkout discoun",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 35
 },
@@ -2503,7 +2989,7 @@
 "img": "https://d.dlnws.com/64599/1794222297-product-trimmed.jpg?h=157&w=73",
 "cat": "Tech",
 "tag": "",
-"store": "Woot! An Amazon",
+"store": "Woot",
 "price": null,
 "was": null,
 "pct": 30,
@@ -2513,6 +2999,10 @@
 "date": "2026-11-09",
 "ts": 1794222302,
 "note": "Woot's Clearance Blowout Bonanza covers tools, electronics, apparel, home goods, and sporting gear, with most items marked 30% off. Examples include the Milwaukee M18 Fuel 7-1/4\" saw at $221 and the EPOS Impact 860 ANC h",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 35
 },
@@ -2533,6 +3023,10 @@
 "date": "2026-11-04",
 "ts": 1793798028,
 "note": "It's $13 when you choose Subscribe & Save, clip the on-page 25% off coupon for first time Sub & Save orders, and apply coupon code \"K9BRSTAP\" at checkout. That's $7 off and the best price ever on Amazon. These Active cle",
+"how": [
+"Free rewards account"
+],
+"code": "K9BRSTAP",
 "tier": "average",
 "score": 35
 },
@@ -2553,6 +3047,10 @@
 "date": "2026-11-09",
 "ts": 1794252305,
 "note": "This MSI Arabescato Carrara marble mosaic tile is a Home Depot Daily Deal, priced at $115 per case, or $12 per sq. ft. That is 33% off the regular per-sq. ft. price of $18. Delivery is free, and returns are accepted with",
+"how": [
+"Delivery"
+],
+"code": "",
 "tier": "average",
 "score": 33
 },
@@ -2573,17 +3071,19 @@
 "date": "2026-11-09",
 "ts": 1794236189,
 "note": "At eBay, this adidas Defender backpack comes to $21 with promo code \"SHOPBRANDS20\", down from a $55 list price. The code takes 20% off the $26 listed price and is capped at $500, so a single backpack easily qualifies. It",
+"how": [],
+"code": "SHOPBRANDS20",
 "tier": "average",
 "score": 33
 },
 {
 "id": "22370238",
 "t": "eBay The Brand Outlet Promo Code Deals: Extra 20% off + free shipping",
-"url": "https://www.dealnews.com/eBay-The-Brand-Outlet-Promo-Code-Deals-Extra-20-off-free-shipping/22370238.html?iref=rss-c202",
+"url": "https://www.dealnews.com/eBay-The-Brand-Outlet-Promo-Code-Deals-Extra-20-off-free-shipping/22370238.html?iref=rss-f1682",
 "img": "https://d.dlnws.com/64599/1701448376-dn-image-6644956.png?h=100&w=250",
 "cat": "Fashion",
 "tag": "",
-"store": "eBay",
+"store": "",
 "price": null,
 "was": null,
 "pct": 20,
@@ -2593,6 +3093,8 @@
 "date": "2026-11-09",
 "ts": 1794229716,
 "note": "At eBay, promo code \"SHOPBRANDS20\" takes 20% off select items in The Brand Outlet, with a maximum discount of $500. Certified refurbished Dyson vacuums are in the mix as well as new adidas shoes, slides, and apparel. Onl",
+"how": [],
+"code": "SHOPBRANDS20",
 "tier": "average",
 "score": 33
 },
@@ -2613,8 +3115,32 @@
 "date": "2026-11-09",
 "ts": 1794214999,
 "note": "At GameStop, buy two Funko pops and get one free. Over 2,000 options are available in this sale. Shop Now at GameStop .",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 33
+},
+{
+"id": "22370867",
+"t": "Unlocked Samsung Galaxy S26 Ultra 256GB Smartphone for $950 + free shipping",
+"url": "https://www.dealnews.com/Unlocked-Samsung-Galaxy-S26-Ultra-256-GB-Smartphone-for-950-free-shipping/22370867.html?iref=rss",
+"img": "https://d.dlnws.com/64599/1794258349-61ieedowlwl.jpg?h=167&w=250",
+"cat": "Tech",
+"tag": "",
+"store": "Amazon",
+"price": 950.0,
+"was": null,
+"pct": 32,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794258354,
+"note": "Amazon lists the unlocked Samsung Galaxy S26 Ultra at 32% off its $1,400 regular price. The phone has a 5,000mAh battery, wireless and reverse wireless charging, and a built-in stylus. Shipping is free. Buy Now at Amazon",
+"how": [],
+"code": "",
+"tier": "average",
+"score": 32
 },
 {
 "id": "22370461",
@@ -2633,13 +3159,15 @@
 "date": "2026-11-09",
 "ts": 1794240434,
 "note": "Tracking temperature, humidity, and wind conditions both inside and outside makes this a solid pick if you split time between house and yard projects, and Amazon has it at $35 off the usual price. Deal ends November 17. ",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 32
 },
 {
 "id": "22370025",
 "t": "Costco Complete Gourmet Thanksgiving Turkey Dinner (Serves 8) for $200 + free shipping",
-"url": "https://www.dealnews.com/Costco-Complete-Gourmet-Thanksgiving-Turkey-Dinner-Serves-8-for-200-free-shipping/22370025.html?iref=rss-c213",
+"url": "https://www.dealnews.com/Costco-Complete-Gourmet-Thanksgiving-Turkey-Dinner-Serves-8-for-200-free-shipping/22370025.html?iref=rss-c377",
 "img": "https://d.dlnws.com/64599/1794218226-2091029-847-1.jpeg?h=250&w=250",
 "cat": "Food & Grocery",
 "tag": "",
@@ -2653,28 +3181,12 @@
 "date": "2026-11-09",
 "ts": 1794218234,
 "note": "Costco's Complete Gourmet Thanksgiving Turkey Dinner is $70 off at $200, with shipping and handling included. The bundle covers a turkey breast, five 3-lb. sides, rolls, gravy, cranberry relish, and two desserts for 8 pe",
+"how": [
+"Delivery"
+],
+"code": "",
 "tier": "average",
 "score": 31
-},
-{
-"id": "22370627",
-"t": "Waterdrop Veterans Day Sale Water Filter Deals at Waterdrop: Up to $500 off + shipping varies",
-"url": "https://www.dealnews.com/Waterdrop-Veterans-Day-Sale-Water-Filter-Deals-at-Waterdrop-Up-to-500-off-shipping-varies/22370627.html?iref=rss-c196",
-"img": "https://d.dlnws.com/64599/1794248106-whf21-sh.jpg?h=250&w=200",
-"cat": "Home & Household",
-"tag": "",
-"store": "Waterdrop",
-"price": 1499.0,
-"was": 1999.0,
-"pct": 25,
-"low": false,
-"hot": false,
-"staff": false,
-"date": "2026-11-09",
-"ts": 1794248113,
-"note": "Waterdrop is running its Veterans Day sale with up to $500 off reverse osmosis water filter systems. The X16 under sink system drops to $1,499, down from $1,999, while the countertop M6SL mineral system is $249, down fro",
-"tier": "average",
-"score": 30
 },
 {
 "id": "22370270",
@@ -2693,6 +3205,8 @@
 "date": "2026-11-09",
 "ts": 1794231499,
 "note": "Get 20% off all outerwear and 25% off leather bags and shoes, plus an extra 12% off with coupon code \"DN12TJM\" during The Jacket Maker's Black Friday Sale. Shop Now at The Jacket Maker . Features Widest range with 450+ d",
+"how": [],
+"code": "DN12TJM",
 "tier": "average",
 "score": 30
 },
@@ -2713,6 +3227,10 @@
 "date": "2026-11-07",
 "ts": 1794061739,
 "note": "The 2026 Sephora Collection advent calendar is out, and you can get it for just $42 right now with the promo code \"ALLONSALE\". You'll need to sign up for a free Beauty Insiders account to use the coupon, but it's well wo",
+"how": [
+"Free rewards account"
+],
+"code": "ALLONSALE",
 "tier": "average",
 "score": 30
 },
@@ -2733,6 +3251,11 @@
 "date": "2026-11-07",
 "ts": 1794061363,
 "note": "Sign up for a free Beauty Insider membership at Sephora, and you'll get a flat 30% off everything in the Sephora Collection with the promo code \"ALLONSALE\". This applies to fragrances, make-up, and skincare, including so",
+"how": [
+"Free rewards account",
+"Delivery"
+],
+"code": "ALLONSALE",
 "tier": "average",
 "score": 30
 },
@@ -2753,6 +3276,11 @@
 "date": "2026-11-09",
 "ts": 1794250916,
 "note": "Home Depot's Daily Deals today put the biggest markdown on kitchen appliances at up to 35% off. Washers & dryers are marked down up to 30%, and vinyl flooring & tile is up to 25% off. We've pictured the GE 30\" 4-Burner E",
+"how": [
+"Online",
+"Delivery"
+],
+"code": "",
 "tier": "average",
 "score": 28
 },
@@ -2773,6 +3301,8 @@
 "date": "2026-11-05",
 "ts": 1793913557,
 "note": "At Amazon, this All-Clad roaster is $50 off. The sale price is well below its 90-day Amazon average of $163. The rack is removable, so the pan can also be used as a baking dish. Shipping is free. Buy Now at Amazon . Feat",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 28
 },
@@ -2793,6 +3323,10 @@
 "date": "2026-11-04",
 "ts": 1793826336,
 "note": "Chard 3-gallon deep-frying oil is $15 off at Tractor Supply. The soybean and peanut oil blend is reusable, Kosher-certified, and free of cholesterol and trans fats. It is made in the USA and rated for both indoor and out",
+"how": [
+"Delivery"
+],
+"code": "",
 "tier": "average",
 "score": 27
 },
@@ -2813,6 +3347,10 @@
 "date": "2026-11-07",
 "ts": 1794046910,
 "note": "Amazon is cutting an extra 25% off toilet paper, tissues, and wipes when you clip the coupon on the product pages and check out via Subscribe & Save. It includes brands like Cottonelle, Scott, Kleenex, and Viva. Toilet p",
+"how": [
+"Free rewards account"
+],
+"code": "",
 "tier": "average",
 "score": 25
 },
@@ -2833,8 +3371,225 @@
 "date": "2026-11-05",
 "ts": 1793884309,
 "note": "The 12-pack of Kind Protein Max Dark Chocolate Crisp bars are 25% off at Amazon. Each bar has 20g of protein and 1g of sugar, and the pack of 12 works out to about $1 per bar. Shipping is free. Buy Now at Amazon . Featur",
+"how": [],
+"code": "",
 "tier": "average",
 "score": 25
+},
+{
+"id": "22370194",
+"t": "McDonald's McCrispy Sandwich for $2",
+"url": "https://www.dealnews.com/Mc-Donalds-Mc-Crispy-Sandwich-for-2/22370194.html?iref=rss-c213",
+"img": "https://d.dlnws.com/64599/1794228017-dc_202012_0383_crispychickensandwich_potatobun_1564x1564-1_nutrition-calculator-tile.avif?h=250&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "McDonald's",
+"price": 2.0,
+"was": null,
+"pct": 0,
+"low": false,
+"hot": true,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794228024,
+"note": "Today only, for National Fried Chicken Sandwich Day, McDonald's is offering a McCrispy Sandwich for $2 through their app. Buy Now at McDonald's .",
+"how": [
+"In the app"
+],
+"code": "",
+"tier": "average",
+"score": 5
+},
+{
+"id": "22370378",
+"t": "Starbucks Bearista Glass Cold Cup Surprise Box Edition for $40",
+"url": "https://www.dealnews.com/Starbucks-Bearista-Glass-Cold-Cup-Surprise-Box-Edition-for-40/22370378.html?iref=rss-c201",
+"img": "https://d.dlnws.com/64599/1794237124-holidayfy27_bearista-box-scaled.webp?h=250&w=167",
+"cat": "Fast Food",
+"tag": "",
+"store": "Starbucks Store",
+"price": 40.0,
+"was": null,
+"pct": 0,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794237130,
+"note": "Starbucks launches its Bearista Glass Cold Cups on November 10, with each hand-blown glass cup sold for $39.95 in a blind box. Each box holds one of five characters, including a rare golden Goldie. Starbucks Rewards Rese",
+"how": [
+"Free rewards account"
+],
+"code": "",
+"tier": "average",
+"score": 0
+},
+{
+"id": "22370256",
+"t": "KFC Chicken Sandwich: Free w/ $10 Purchase",
+"url": "https://www.dealnews.com/KFC-Chicken-Sandwich-Free-w-10-Purchase/22370256.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1794230714-kfc-cknsndalc-1-1.png?h=250&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "KFC",
+"price": 10.0,
+"was": null,
+"pct": 0,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794230720,
+"note": "Today only, for National Chicken Sandwich Day, KFC is offering a free Chicken Sandwich on online orders of $10 or more through a KFC Rewards account. (Not a member? It's free to join.) Shop Now at KFC .",
+"how": [
+"Free rewards account",
+"Online"
+],
+"code": "",
+"tier": "average",
+"score": 0
+},
+{
+"id": "22370255",
+"t": "Whataburger Signature Sandwich or Spicy Chicken Sandwich for $2",
+"url": "https://www.dealnews.com/Whataburger-Signature-Sandwich-or-Spicy-Chicken-Sandwich-for-2/22370255.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1794230608-wbhq26-menuimage-alc-swcs608x540.png?h=222&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "Whataburger",
+"price": 2.0,
+"was": null,
+"pct": 0,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794230614,
+"note": "Today only, for National Chicken Sandwich Day, Whataburger Rewards members can get the Signature Whataburger Sandwich or Spicy Chicken Sandwich for $2. (Not a member? It's free to join.) Buy Now at Whataburger .",
+"how": [
+"Free rewards account"
+],
+"code": "",
+"tier": "average",
+"score": 0
+},
+{
+"id": "22370174",
+"t": "Popeyes Chicken Sandwich: Free w/ $10 purchase + free shipping",
+"url": "https://www.dealnews.com/Popeyes-Chicken-Sandwich-Free-w-10-purchase-free-shipping/22370174.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1794227282-f39c9409309e826af31f3fd98164ed50f6d53dfa-2000x1333.png?h=167&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "Popeyes",
+"price": 10.0,
+"was": null,
+"pct": 0,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794227295,
+"note": "Today only, for National Fried Chicken Sandwich Day, get a free Popeyes Chicken Sandwich with a $10 purchase or more. (You'll need to be a Rewards member; it's free to join.) Pick between the Classic, Spicy, or Honey BBQ",
+"how": [
+"Free rewards account"
+],
+"code": "",
+"tier": "average",
+"score": 0
+},
+{
+"id": "22370056",
+"t": "Burger King 10-Piece Chicken Nuggets Meal for $4",
+"url": "https://www.dealnews.com/Burger-King-10-Piece-Chicken-Nuggets-Meal-for-4/22370056.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1794220811-4264af62963beaba0f99b4b44789f7faeb6eb45e-2100x1050.png?h=125&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "Burger King",
+"price": 4.0,
+"was": null,
+"pct": 0,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-09",
+"ts": 1794220825,
+"note": "Burger King is offering a 10-Piece Chicken Nuggets with a free small drink and small fries for $3.99. The offer runs every day through November 15. Buy Now at Burger King .",
+"how": [],
+"code": "",
+"tier": "average",
+"score": 0
+},
+{
+"id": "22355591",
+"t": "Moe's Southwest Grill Nachos for $6",
+"url": "https://www.dealnews.com/Moes-Southwest-Grill-Nachos-for-6/22355591.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1793971640-image.png?h=90&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "Moe's Southwest Grill",
+"price": 6.0,
+"was": null,
+"pct": 0,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-06",
+"ts": 1793971648,
+"note": "Moe's Southwest Grill is offering nachos for $5.99 for Nacho Day. Everyone can get the deal in-store today. Moe Rewards members can also order ahead online for pickup or delivery. (Not a member? It's free to join.) Buy N",
+"how": [
+"Free rewards account",
+"In store",
+"Online"
+],
+"code": "",
+"tier": "average",
+"score": 0
+},
+{
+"id": "22355542",
+"t": "Upcoming: Buffalo Wild Wings Chicken Sandwich: Free w/ $10 purchase on Nov 9",
+"url": "https://www.dealnews.com/Upcoming-Buffalo-Wild-Wings-Chicken-Sandwich-Free-w-10-purchase-on-Nov-9/22355542.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1793968471-f_avif_w_400_q_80.png?h=188&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "Buffalo Wild Wings",
+"price": 10.0,
+"was": null,
+"pct": 0,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-06",
+"ts": 1793968478,
+"note": "On November 9, Buffalo Wild Wings Rewards members can get a free Classic or Spicy Chicken Sandwich with a $10 purchase. (Not a member? It's free to join.) Shop Now at Buffalo Wild Wings .",
+"how": [
+"Free rewards account"
+],
+"code": "",
+"tier": "average",
+"score": 0
+},
+{
+"id": "22342129",
+"t": "Popeyes Chicken Bundle for $20",
+"url": "https://www.dealnews.com/Popeyes-Chicken-Bundle-for-20/22342129.html?iref=rss-c377",
+"img": "https://d.dlnws.com/64599/1793720975-product-trimmed.jpg?h=250&w=250",
+"cat": "Fast Food",
+"tag": "",
+"store": "Popeyes",
+"price": 20.0,
+"was": null,
+"pct": 0,
+"low": false,
+"hot": false,
+"staff": false,
+"date": "2026-11-03",
+"ts": 1793720986,
+"note": "Popeyes offers a bundle featuring three proteins and two sides for $20. Buy Now at Popeyes .",
+"how": [],
+"code": "",
+"tier": "average",
+"score": 0
 }
 ]
 }
