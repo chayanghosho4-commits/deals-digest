@@ -22,6 +22,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Collect deals
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}           # optional: free Reddit app key
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USERNAME: ${{ secrets.REDDIT_USERNAME }}
         run: python deals.py
       - name: Save results
         run: |
